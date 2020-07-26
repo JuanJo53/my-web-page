@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./assets/styles/App.scss";
 export default class Badge extends React.Component {
 	render() {
 		return (

@@ -1,7 +1,7 @@
 // Requerimos el modulo de path el Html plugin que isntalamos
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // Creamos un nuevo modulo que vamos a exportar con esta configuracion
 // Vamos a configurar cada unos de los elementos que necesitamos
 
@@ -41,6 +41,16 @@ module.exports = {
 				use: {
 					loader: "html-loader"
 				}
+			},
+			{
+				test: /\.(s*)css$/,
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader
+					},
+					"css-loader",
+					"sass-loader"
+				]
 			}
 		]
 	},
@@ -51,6 +61,9 @@ module.exports = {
 			//Donde esta ubicado el template que tenemos
 			template: "./public/index.html",
 			filename: "./index.html"
+		}),
+		new MiniCssExtractPlugin({
+			filename: "assets/[name].css"
 		})
 	]
 };
