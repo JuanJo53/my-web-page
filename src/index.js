@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Project from "./components/Project";
+import App from "./containers/App";
+
 const container = document.getElementById("root");
 
-ReactDOM.render(<Project />, container);
+ReactDOM.render(<App />, container);
