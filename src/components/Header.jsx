@@ -13,34 +13,34 @@ const Header = () => (
 					</div>
 					<ul className="col navbar-nav mr-auto">
 						<li className="nav-item active">
-							<a className="nav-link" href="">
+							<a className="nav-link navlinks" href="">
 								HOME
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
+							<a className="nav-link navlinks" href="">
 								PROFILE
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
+							<a className="nav-link navlinks" href="">
 								EXPIRIENCES
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
+							<a className="nav-link navlinks" href="">
 								CONTACT
 							</a>
 						</li>
 					</ul>
 					<ul className="col-sm-4 navbar-nav mr-auto">
 						<li className="nav-item active">
-							<a className="nav-link" href="">
+							<a className="nav-link navlinks" href="">
 								BLOG
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
+							<a className="nav-link navlinks" href="">
 								MY COURSES
 							</a>
 						</li>
@@ -58,7 +58,7 @@ const Header = () => (
 						</li>
 						<li className="nav-item active">
 							<a
-								className="nav-link"
+								className="nav-link "
 								href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163"
 								target="_blank"
 							>
