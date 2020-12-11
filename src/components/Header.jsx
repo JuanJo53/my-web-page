@@ -47,23 +47,27 @@ const Header = () => (
 					</ul>
 					<ul className="col col-lg-2 navbar-nav mr-auto">
 						<li className="nav-item active">
-							<a className="nav-link" href="">
-								Instagram
+							<a className="nav-link" href="https://www.instagram.com/juanjo53fd/" target="_blank">
+								<img src="src/assets/images/instagram-white.png" alt="github" width="30" height="30" />
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
-								Twitter
+							<a className="nav-link" href="https://twitter.com/JuanJo53FD" target="_blank">
+								<img src="src/assets/images/twitter-white.png" alt="github" width="30" height="30" />
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
-								LinkedIn
+							<a
+								className="nav-link"
+								href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163"
+								target="_blank"
+							>
+								<img src="src/assets/images/linkedin-white.png" alt="github" width="30" height="30" />
 							</a>
 						</li>
 						<li className="nav-item active">
-							<a className="nav-link" href="">
-								Github
+							<a className="nav-link" href="https://github.com/JuanJo53" target="_blank">
+								<img src="src/assets/images/github-white.png" alt="github" width="30" height="30" />
 							</a>
 						</li>
 					</ul>
