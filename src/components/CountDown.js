@@ -45,7 +45,7 @@ class CountDown extends Component {
 		return (
 			<div className="countdown row">
 				{Object.keys(this.state).map((key, i) => (
-					<div className="countdown-segment col-2 ">
+					<div className="countdown-segment col">
 						<span className="countdown-segment-number row justify-content-center ">
 							{this.addZeros(this.state[key])}
 						</span>
