@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Home from "../pages/home/Home";
 import Profile from "../pages/home/Profile";
 import Header from "../components/Header";
+import ComingSoon from "../pages/aux-pages/ComingSoon";
 
 import * as Icon from "react-bootstrap-icons";
 import "../styles/App.scss";
@@ -19,7 +20,8 @@ const App = () => {
 		<body>
 			<div className="App">
 				<Header></Header>
-				<Home></Home>
+				<ComingSoon></ComingSoon>
+				{/* <Home></Home>
 				<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
 					<div className="down-button row justify-content-center">
 						<div className="col-0">
@@ -31,7 +33,7 @@ const App = () => {
 						</div>
 					</div>
 				</Slide>
-				<Profile></Profile>
+				<Profile></Profile> */}
 			</div>
 		</body>
 	);

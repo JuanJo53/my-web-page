@@ -1,0 +1,21 @@
+.countdown {
+	display: grid;
+	margin-top: 50px;
+}
+.countdown div:not(:last-child) {
+	border-right: 2px solid #598392;
+}
+.countdown-segment-number {
+	font-size: 30px;
+	font-weight: 700;
+	transition: all 0.2s ease-in;
+}
+
+.countdown-segment-number:hover {
+	transform: scale(1.3);
+}
+
+.countdown-segment-caption {
+	font-size: 16px;
+	font-weight: 500;
+}
