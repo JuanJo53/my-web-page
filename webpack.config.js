@@ -35,6 +35,16 @@ module.exports = {
 				}
 			},
 			{
+				test: /\.svg/,
+				use: {
+					loader: "svg-url-loader",
+					options: {
+						// make all svg images to work in IE
+						iesafe: true
+					}
+				}
+			},
+			{
 				// Regla para trabajar con los archivos html
 				test: /\.html$/,
 				// Utilizamos el loader de babel instalado

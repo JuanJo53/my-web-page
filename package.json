@@ -18,7 +18,8 @@
 		"react-bootstrap-icons": "^1.1.0",
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.1",
-		"react-scroll": "^1.8.1"
+		"react-scroll": "^1.8.1",
+		"svg-url-loader": "^7.1.1"
 	},
 	"scripts": {
 		"start": "webpack-dev-server --open --mode development",

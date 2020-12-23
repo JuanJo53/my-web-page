@@ -10,6 +10,7 @@ body {
 	font-family: "Roboto", "Helvetica Neue", sans-serif;
 	background-color: #01161e;
 	color: #fff;
+	background-image: url(../assets/images/circuit-board.svg?encoding=base64);
 }
 
 h1 {
