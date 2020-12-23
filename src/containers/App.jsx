@@ -17,11 +17,10 @@ const App = () => {
 		setChecked(true);
 	}, []);
 	return (
-		<body>
-			<div className="App">
-				<Header></Header>
-				<ComingSoon></ComingSoon>
-				{/* <Home></Home>
+		<div className="App">
+			<Header></Header>
+			<ComingSoon></ComingSoon>
+			{/* <Home></Home>
 				<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
 					<div className="down-button row justify-content-center">
 						<div className="col-0">
@@ -34,8 +33,7 @@ const App = () => {
 					</div>
 				</Slide>
 				<Profile></Profile> */}
-			</div>
-		</body>
+		</div>
 	);
 };
 export default App;

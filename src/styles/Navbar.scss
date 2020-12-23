@@ -7,31 +7,24 @@
 ul {
 	list-style: none;
 }
-.navlinks {
-	color: #ffffff;
-}
-.navlinks:hover {
-	color: lightgrey;
-	transition: all 0.2s ease-in;
-}
-.Navbar__brand {
-	color: #ffffff;
 
+.navbar-brand {
+	color: #ffffff;
 	display: flex;
 	align-items: center;
 }
 
-.Navbar__brand:hover {
+.navbar-brand:hover {
 	color: #ffffff;
 	text-decoration: none;
 	transition: all 0.2s ease-in;
 	transform: scale(1.2);
 }
 
-.Navbar__brand-logo {
-	margin-right: 0.5rem;
-}
 .socialIcon {
+	color: #ffffff;
+}
+.menuIcon {
 	color: #ffffff;
 }
 .socialIcon:hover {
