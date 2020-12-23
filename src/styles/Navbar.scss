@@ -12,6 +12,7 @@ ul {
 }
 .navlinks:hover {
 	color: lightgrey;
+	transition: all 0.2s ease-in;
 }
 .Navbar__brand {
 	color: #ffffff;
@@ -23,6 +24,8 @@ ul {
 .Navbar__brand:hover {
 	color: #ffffff;
 	text-decoration: none;
+	transition: all 0.2s ease-in;
+	transform: scale(1.2);
 }
 
 .Navbar__brand-logo {
@@ -30,10 +33,9 @@ ul {
 }
 .socialIcon {
 	color: #ffffff;
-	transition: all 0.5s ease-in;
 }
-
 .socialIcon:hover {
+	transition: all 0.2s ease-in;
 	transform: scale(1.2);
 	color: lightgrey;
 }

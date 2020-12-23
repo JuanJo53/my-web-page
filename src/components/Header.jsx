@@ -14,7 +14,7 @@ const Header = () => (
 			<div className="row collapse navbar-collapse" id="navbarSupportedContent">
 				<div className="colnavbar-brand">
 					<a href="">
-						<img src="src/assets/images/logo.png" alt="jjfd_logo" width="50" height="50" />
+						<img src="../src/assets/images/logo.png" alt="jjfd_logo" width="50" height="50" />
 					</a>
 				</div>
 				<ul className="col navbar-nav mr-auto">
