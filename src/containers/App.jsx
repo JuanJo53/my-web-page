@@ -6,7 +6,7 @@ import LandingHome from "../pages/LandingHome";
 import ComingSoon from "../pages/aux-pages/ComingSoon";
 import NotFound from "../pages/aux-pages/NotFound";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
 	return (
@@ -22,6 +22,10 @@ function App() {
 				<Route exact path="/NotFound">
 					<NotFound />
 				</Route>
+				<Route path="/404">
+					<NotFound />
+				</Route>
+				<Redirect from="*" to="/404" />
 			</Switch>
 		</BrowserRouter>
 	);

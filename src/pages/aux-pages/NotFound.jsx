@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import "../../styles/NotFound.scss";
 
 export default class NotFound extends Component {
@@ -231,7 +233,9 @@ export default class NotFound extends Component {
 						<h1 className="fs-1-NT fw-bolder">404</h1>
 						<h1 className="fs-2 fw-bolder">Looks like you´re lost</h1>
 						<h5 className="fw-normal">Oops! The page you´re looking is not available!</h5>
-						<button className="btn btn-primary">Go Home</button>
+						<Link className="btn btn-primary" to="/">
+							Go Home
+						</Link>
 					</div>
 				</div>
 			</div>

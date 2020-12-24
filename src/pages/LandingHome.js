@@ -17,7 +17,7 @@ function LandingHome() {
 		setChecked(true);
 	}, []);
 	return (
-		<div>
+		<React.Fragment>
 			<Home></Home>
 			<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
 				<div className="down-button row justify-content-center">
@@ -33,7 +33,7 @@ function LandingHome() {
 			<Profile></Profile>
 			<Experiences></Experiences>
 			<Contact></Contact>
-		</div>
+		</React.Fragment>
 	);
 }
 export default LandingHome;
