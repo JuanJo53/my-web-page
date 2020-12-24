@@ -4,6 +4,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import MenuIcon from "@material-ui/icons/Menu";
+import { Link as Scroll } from "react-scroll";
 
 import "./../styles/Navbar.scss";
 import Navbar from "react-bootstrap/Navbar";
@@ -20,24 +21,32 @@ const Header = () => (
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item ">
-						<a className="nav-link navlinks" aria-current="page" href="#home">
-							HOME
-						</a>
+						<Scroll to="home" smooth={true}>
+							<a className="nav-link navlinks" aria-current="page" href="#home">
+								HOME
+							</a>
+						</Scroll>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link navlinks" href="#profile">
-							PROFILE
-						</a>
+						<Scroll to="profile" smooth={true}>
+							<a className="nav-link navlinks" href="#profile">
+								PROFILE
+							</a>
+						</Scroll>
 					</li>
 					<li className="nav-item ">
-						<a className="nav-link navlinks" href="#expiriences">
-							EXPIRIENCES
-						</a>
+						<Scroll to="experiences" smooth={true}>
+							<a className="nav-link navlinks" href="#expiriences">
+								EXPIRIENCES
+							</a>
+						</Scroll>
 					</li>
 					<li className="nav-item ">
-						<a className="nav-link navlinks" href="#contact">
-							CONTACT
-						</a>
+						<Scroll to="contact" smooth={true}>
+							<a className="nav-link navlinks" href="#contact">
+								CONTACT
+							</a>
+						</Scroll>
 					</li>
 				</ul>
 				<ul className="navbar-nav mr-auto">

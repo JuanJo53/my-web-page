@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 
+import Header from "../components/Header";
 import Home from "../pages/home/Home";
 import Profile from "../pages/home/Profile";
-import Header from "../components/Header";
+import Experiences from "../pages/home/Experiences";
+import Contact from "../pages/home/Contact";
+
 import ComingSoon from "../pages/aux-pages/ComingSoon";
 import NotFound from "../pages/aux-pages/NotFound";
 
@@ -35,6 +38,8 @@ const App = () => {
 				</div>
 			</Slide>
 			<Profile></Profile>
+			<Experiences></Experiences>
+			<Contact></Contact>
 		</div>
 	);
 };
