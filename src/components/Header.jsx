@@ -5,6 +5,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link as Scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import "./../styles/Navbar.scss";
 import Navbar from "react-bootstrap/Navbar";
@@ -12,53 +13,45 @@ import Navbar from "react-bootstrap/Navbar";
 const Header = () => (
 	<Navbar collapseOnSelect expand="lg" variant="dark" className="Navbar sticky-top ">
 		<div className="container justify-content-md-center">
-			<a className="navbar-brand" href="">
-				<img src="../src/assets/images/Logo-principal-JJFD-beige-grisaceo.png" alt="jjfd_logo" width="50" height="50" />
-			</a>
+			<Link className="navbar-brand" to="/">
+				<img src="./src/assets/images/Logo-principal-JJFD-Blanco.png" alt="jjfd_logo" width="50" height="50" />
+			</Link>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav">
 				<MenuIcon className="menuIcon" fontSize="large" />
 			</Navbar.Toggle>
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item ">
-						<Scroll to="home" smooth={true}>
-							<a className="nav-link navlinks" aria-current="page" href="#home">
-								HOME
-							</a>
+						<Scroll className="nav-link navlinks" to="home" smooth={true} href="#home">
+							HOME
 						</Scroll>
 					</li>
 					<li className="nav-item">
-						<Scroll to="profile" smooth={true}>
-							<a className="nav-link navlinks" href="#profile">
-								PROFILE
-							</a>
+						<Scroll className="nav-link navlinks" to="profile" smooth={true} href="#profile">
+							PROFILE
 						</Scroll>
 					</li>
 					<li className="nav-item ">
-						<Scroll to="experiences" smooth={true}>
-							<a className="nav-link navlinks" href="#expiriences">
-								EXPIRIENCES
-							</a>
+						<Scroll className="nav-link navlinks" href="#expiriences" to="experiences" smooth={true}>
+							EXPIRIENCES
 						</Scroll>
 					</li>
 					<li className="nav-item ">
-						<Scroll to="contact" smooth={true}>
-							<a className="nav-link navlinks" href="#contact">
-								CONTACT
-							</a>
+						<Scroll className="nav-link navlinks" href="#contact" to="contact" smooth={true}>
+							CONTACT
 						</Scroll>
 					</li>
 				</ul>
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
-						<a className="nav-link navlinks" href="#blog">
+						<Link className="nav-link navlinks" to="/ComingSoon">
 							BLOG
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link navlinks" href="#courses">
+						<Link className="nav-link navlinks" to="/NotFound">
 							MY COURSES
-						</a>
+						</Link>
 					</li>
 				</ul>
 				<ul className="navbar-nav mr-auto">

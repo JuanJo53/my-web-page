@@ -1,6 +1,6 @@
-/*code {
+/* code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-} */
+} 
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
@@ -97,4 +97,4 @@ a.link-unstyled:hover {
 
 .btn.btn-danger:not(:disabled):not(.disabled):focus {
 	box-shadow: 0 0 0 0.2rem rgba(255, 64, 64, 0.5);
-}
+} */
