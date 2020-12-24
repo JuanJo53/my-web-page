@@ -10,7 +10,7 @@ import * as Icon from "react-bootstrap-icons";
 import "../styles/App.scss";
 
 import { Link as Scroll } from "react-scroll";
-import { IconButton, Collapse, Slide, Zoom } from "@material-ui/core";
+import { IconButton, Collapse, Slide } from "@material-ui/core";
 
 const App = () => {
 	const [checked, setChecked] = useState(false);
@@ -20,8 +20,8 @@ const App = () => {
 	return (
 		<div className="App">
 			<Header></Header>
-			<NotFound></NotFound>
-			{/* <ComingSoon></ComingSoon>
+			{/* <NotFound></NotFound>
+			<ComingSoon></ComingSoon> */}
 			<Home></Home>
 			<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
 				<div className="down-button row justify-content-center">
@@ -34,7 +34,7 @@ const App = () => {
 					</div>
 				</div>
 			</Slide>
-			<Profile></Profile> */}
+			<Profile></Profile>
 		</div>
 	);
 };
