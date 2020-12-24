@@ -31,6 +31,17 @@ function LandingHome() {
 				</div>
 			</Slide>
 			<Profile></Profile>
+			<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
+				<div className="down-button row justify-content-center">
+					<div className="col-0">
+						<Scroll to="experiences" smooth={true}>
+							<IconButton>
+								<Icon.ChevronDown size={50} color="white" />
+							</IconButton>
+						</Scroll>
+					</div>
+				</div>
+			</Slide>
 			<Experiences></Experiences>
 			<Contact></Contact>
 		</React.Fragment>
