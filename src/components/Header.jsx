@@ -44,12 +44,12 @@ const Header = () => (
 				</ul>
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
-						<Link className="nav-link navlinks" to="/ComingSoon">
+						<Link className="nav-link navlinks" to="/blog">
 							BLOG
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link navlinks" to="/NotFound">
+						<Link className="nav-link navlinks" to="/courses">
 							MY COURSES
 						</Link>
 					</li>

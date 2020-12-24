@@ -16,10 +16,10 @@ function App() {
 				<Route exact path="/">
 					<LandingHome />
 				</Route>
-				<Route exact path="/ComingSoon">
+				<Route exact path="/blog">
 					<ComingSoon />
 				</Route>
-				<Route exact path="/NotFound">
+				<Route exact path="/courses">
 					<NotFound />
 				</Route>
 				<Route path="/404">
