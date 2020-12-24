@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import Profile from "../pages/home/Profile";
 import Header from "../components/Header";
 import ComingSoon from "../pages/aux-pages/ComingSoon";
+import NotFound from "../pages/aux-pages/NotFound";
 
 import * as Icon from "react-bootstrap-icons";
 import "../styles/App.scss";
@@ -19,20 +20,21 @@ const App = () => {
 	return (
 		<div className="App">
 			<Header></Header>
-			<ComingSoon></ComingSoon>
-			{/* <Home></Home>
-				<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
-					<div className="down-button row justify-content-center">
-						<div className="col-0">
-							<Scroll to="profile" smooth={true}>
-								<IconButton>
-									<Icon.ChevronDown size={50} color="white" />
-								</IconButton>
-							</Scroll>
-						</div>
+			<NotFound></NotFound>
+			{/* <ComingSoon></ComingSoon>
+			<Home></Home>
+			<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
+				<div className="down-button row justify-content-center">
+					<div className="col-0">
+						<Scroll to="profile" smooth={true}>
+							<IconButton>
+								<Icon.ChevronDown size={50} color="white" />
+							</IconButton>
+						</Scroll>
 					</div>
-				</Slide>
-				<Profile></Profile> */}
+				</div>
+			</Slide>
+			<Profile></Profile> */}
 		</div>
 	);
 };

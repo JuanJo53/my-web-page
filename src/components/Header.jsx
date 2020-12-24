@@ -12,7 +12,7 @@ const Header = () => (
 	<Navbar collapseOnSelect expand="lg" variant="dark" className="Navbar sticky-top ">
 		<div className="container justify-content-md-center">
 			<a className="navbar-brand" href="">
-				<img src="../src/assets/images/logo.png" alt="jjfd_logo" width="50" height="50" />
+				<img src="../src/assets/images/Logo-principal-JJFD-beige-grisaceo.png" alt="jjfd_logo" width="50" height="50" />
 			</a>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav">
 				<MenuIcon className="menuIcon" fontSize="large" />

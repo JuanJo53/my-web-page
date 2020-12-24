@@ -13,7 +13,7 @@ class Home extends React.Component {
 						</h3>
 					</div>
 					<div className="col">
-						<img src="src/assets/images/logo.png" alt="logo" width="500" height="500" />
+						<img src="src/assets/images/Logo-principal-JJFD-turquesa-claro.png" alt="logo" width="500" height="500" />
 					</div>
 				</div>
 			</div>
