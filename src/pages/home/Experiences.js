@@ -10,6 +10,9 @@ export default class Experiences extends Component {
 					<h5 className="experiences-desc">Here´s some of my work and experiences.</h5>
 					<hr className="solid"></hr>
 				</div>
+				<div className="experiences-education">
+					<h2 className="education-title">Education</h2>
+				</div>
 			</div>
 		);
 	}
