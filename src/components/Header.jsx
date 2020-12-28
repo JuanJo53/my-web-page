@@ -6,7 +6,7 @@ import { Link as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 
 import "./../styles/Navbar.scss";
-import Navbar from "react-bootstrap/Navbar";
+import { Navbar, NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
 
 const Header = () => (
 	<Navbar collapseOnSelect expand="lg" variant="dark" className="Navbar sticky-top ">
@@ -18,7 +18,7 @@ const Header = () => (
 				<Menu className="menuIcon" fontSize="large" />
 			</Navbar.Toggle>
 			<Navbar.Collapse id="responsive-navbar-nav">
-				<ul className="navbar-nav mr-auto">
+				<ul className="navbar-nav mr-auto align-middle">
 					<li className="nav-item ">
 						<Scroll className="nav-link navlinks" to="home" smooth={true} href="#home">
 							HOME
@@ -29,10 +29,18 @@ const Header = () => (
 							PROFILE
 						</Scroll>
 					</li>
-					<li className="nav-item ">
-						<Scroll className="nav-link navlinks" href="#expiriences" to="experiences" smooth={true}>
-							EXPIRIENCES
-						</Scroll>
+					<li className="nav-item">
+						<NavDropdown title="EXPERIENCES" id="basic-nav-dropdown">
+							<Scroll className="dropdown-item" href="#experiences" to="experiences" smooth={true}>
+								EDUCATION
+							</Scroll>
+							<Scroll className="dropdown-item" href="#work" to="work" smooth={true}>
+								WORK
+							</Scroll>
+							<Scroll className="dropdown-item" href="#portfolio" to="portfolio" smooth={true}>
+								PORTFOLIO
+							</Scroll>
+						</NavDropdown>
 					</li>
 					<li className="nav-item ">
 						<Scroll className="nav-link navlinks" href="#contact" to="contact" smooth={true}>
