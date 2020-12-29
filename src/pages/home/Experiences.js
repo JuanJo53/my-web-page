@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import EducationCard from "../../components/EducationCard";
+import WorkCard from "../../components/WorkCard";
+import ProjectCard from "../../components/ProjectCard";
 
 import "../../styles/Experiences.scss";
 export default class Experiences extends Component {
@@ -15,16 +17,33 @@ export default class Experiences extends Component {
 				<div className="experiences-education">
 					<h2 className="experiences-titles">Education</h2>
 					<EducationCard></EducationCard>
+					<br />
+					<EducationCard></EducationCard>
+					<br />
+					<EducationCard></EducationCard>
+					<br />
 				</div>
-
 				<hr className="solid"></hr>
+
 				<div id="work" className="experiences-work">
 					<h2 className="experiences-titles">Work Experiences</h2>
+					<WorkCard></WorkCard>
+					<br />
+					<WorkCard></WorkCard>
+					<br />
+					<WorkCard></WorkCard>
+					<br />
 				</div>
-
 				<hr className="solid"></hr>
+
 				<div id="portfolio" className="experiences-portfolio">
 					<h2 className="experiences-titles">Portfolio</h2>
+					<ProjectCard></ProjectCard>
+					<br />
+					<ProjectCard></ProjectCard>
+					<br />
+					<ProjectCard></ProjectCard>
+					<br />
 				</div>
 			</div>
 		);
