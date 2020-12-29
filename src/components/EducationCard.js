@@ -5,8 +5,8 @@ import { Card, Image } from "react-bootstrap";
 export default function EducationCard(props) {
 	return (
 		<div className="education-card">
-			<Card className="card container">
-				<Card.Body className="row justify-content-around card-body">
+			<Card className="experiences-card container">
+				<Card.Body className="row justify-content-around experiences-card-body">
 					<div className="col col-3">
 						<Card.Title as="h4" className="org-title text-center">
 							{props.organization}
