@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import EducationCard from "../../components/EducationCard";
 import WorkCard from "../../components/WorkCard";
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCards from "../../components/ProjectCards";
 
 import "../../styles/Experiences.scss";
 export default class Experiences extends Component {
@@ -68,11 +68,7 @@ export default class Experiences extends Component {
 
 				<div id="portfolio" className="experiences-portfolio">
 					<h2 className="experiences-titles">Portfolio</h2>
-					<ProjectCard></ProjectCard>
-					<br />
-					<ProjectCard></ProjectCard>
-					<br />
-					<ProjectCard></ProjectCard>
+					<ProjectCards />
 					<br />
 				</div>
 			</div>

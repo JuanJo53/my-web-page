@@ -12,8 +12,8 @@ class Home extends React.Component {
 					<h5 className="profile-desc">I'm a software developer</h5>
 					<hr className="solid"></hr>
 				</div>
-				<Card className="card container">
-					<Card.Body className="row justify-content-md-center card-body">
+				<Card className="card container profile-card">
+					<Card.Body className="row justify-content-md-center card-body profile-card-body">
 						<div className="col col-4 profile-img">
 							<Card.Img src="./src/assets/images/profile.jpg" />
 						</div>

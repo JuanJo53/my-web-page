@@ -50,12 +50,12 @@ const Header = () => (
 				</ul>
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
-						<Link className="nav-link navlinks" to="/blog">
+						<Link className="nav-link navlinks disabled" to="/blog">
 							BLOG
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link navlinks" to="/courses">
+						<Link className="nav-link navlinks disabled" to="/courses">
 							MY COURSES
 						</Link>
 					</li>
