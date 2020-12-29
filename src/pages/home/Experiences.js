@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import EducationCard from "../../components/EducationCard";
+
 import "../../styles/Experiences.scss";
 export default class Experiences extends Component {
 	render() {
@@ -11,7 +13,18 @@ export default class Experiences extends Component {
 					<hr className="solid"></hr>
 				</div>
 				<div className="experiences-education">
-					<h2 className="education-title">Education</h2>
+					<h2 className="experiences-titles">Education</h2>
+					<EducationCard></EducationCard>
+				</div>
+
+				<hr className="solid"></hr>
+				<div id="work" className="experiences-work">
+					<h2 className="experiences-titles">Work Experiences</h2>
+				</div>
+
+				<hr className="solid"></hr>
+				<div id="portfolio" className="experiences-portfolio">
+					<h2 className="experiences-titles">Portfolio</h2>
 				</div>
 			</div>
 		);
