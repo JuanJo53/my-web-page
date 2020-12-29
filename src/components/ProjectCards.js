@@ -17,7 +17,7 @@ export default function ProjectCards() {
 							</p>
 						</div>
 						<div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
+							<small class="text-muted">JS, HTML, CSS, Firebase</small>
 						</div>
 					</div>
 				</div>
@@ -32,7 +32,7 @@ export default function ProjectCards() {
 							</p>
 						</div>
 						<div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
+							<small class="text-muted">Bootstrap, JS, HTML, Firebase</small>
 						</div>
 					</div>
 				</div>
@@ -40,13 +40,14 @@ export default function ProjectCards() {
 					<div className="card h-100 project-card">
 						<img src="..." className="card-img-top" alt="..."></img>
 						<div className="card-body project-card-body">
-							<h5 className="card-title">Card title</h5>
+							<h5 className="card-title">Plataforma Idiomas UCB</h5>
 							<p className="card-text">
-								This is a longer card with supporting text below as a natural lead-in to additional content.
+								This is a platform that helps steudents and teachers in a better comunication, organization and
+								interaction for lenguaje classes.
 							</p>
 						</div>
 						<div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
+							<small class="text-muted">Angular, NodeJS, GCP</small>
 						</div>
 					</div>
 				</div>
@@ -54,14 +55,11 @@ export default function ProjectCards() {
 					<div className="card h-100 project-card ">
 						<img src="..." className="card-img-top" alt="..."></img>
 						<div className="card-body project-card-body">
-							<h5 className="card-title">Card title</h5>
-							<p className="card-text">
-								This is a longer card with supporting text below as a natural lead-in to additional content. This
-								content is a little bit longer.
-							</p>
+							<h5 className="card-title">Flutter Calculator</h5>
+							<p className="card-text">This is simple scientific calculator made with Flutter.</p>
 						</div>
 						<div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
+							<small class="text-muted">Flutter</small>
 						</div>
 					</div>
 				</div>
