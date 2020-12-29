@@ -34,7 +34,7 @@ const Header = () => (
 							<Scroll className="dropdown-item" href="#experiences" to="experiences" smooth={true}>
 								EDUCATION
 							</Scroll>
-							<Scroll className="dropdown-item" href="#work" to="work" smooth={true}>
+							<Scroll className="dropdown-item disabled" href="#work" to="work" smooth={true} disabled>
 								WORK
 							</Scroll>
 							<Scroll className="dropdown-item" href="#portfolio" to="portfolio" smooth={true}>
