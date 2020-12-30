@@ -16,8 +16,8 @@ export default function ProjectCards() {
 								business interaction.
 							</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted">JS, HTML, CSS, Firebase</small>
+						<div className="card-footer">
+							<small className="text-muted">JS, HTML, CSS, Firebase</small>
 						</div>
 					</div>
 				</div>
@@ -31,8 +31,8 @@ export default function ProjectCards() {
 								posted.
 							</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted">Bootstrap, JS, HTML, Firebase</small>
+						<div className="card-footer">
+							<small className="text-muted">Bootstrap, JS, HTML, Firebase</small>
 						</div>
 					</div>
 				</div>
@@ -46,8 +46,8 @@ export default function ProjectCards() {
 								interaction for lenguaje classes.
 							</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted">Angular, NodeJS, GCP</small>
+						<div className="card-footer">
+							<small className="text-muted">Angular, NodeJS, GCP</small>
 						</div>
 					</div>
 				</div>
@@ -58,8 +58,8 @@ export default function ProjectCards() {
 							<h5 className="card-title">Flutter Calculator</h5>
 							<p className="card-text">This is simple scientific calculator made with Flutter.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted">Flutter</small>
+						<div className="card-footer">
+							<small className="text-muted">Flutter</small>
 						</div>
 					</div>
 				</div>

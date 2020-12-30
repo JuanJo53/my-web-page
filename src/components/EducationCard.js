@@ -7,13 +7,13 @@ export default function EducationCard(props) {
 		<div className="education-card">
 			<Card className="experiences-card container">
 				<Card.Body className="row justify-content-around experiences-card-body">
-					<div className="col col-3">
+					<div className="col col-auto col-sm-auto col-lg-3 col-md-auto">
 						<Card.Title as="h4" className="org-title text-center">
 							{props.organization}
 						</Card.Title>
 						<Card.Text className="org-time-text text-center">{props.time}</Card.Text>
 						<div className="org-img text-center">
-							<Card.Img className="img-fluid img-thumbnail " src={props.img} />
+							<Card.Img className="img-fluid img-thumbnail flex-sm-nowrap" src={props.img} />
 						</div>
 					</div>
 					<div className="col col-8 org-about">

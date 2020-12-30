@@ -37,7 +37,7 @@ export default class Experiences extends Component {
 						decision making. This career thought me about how to use information technologies for making human
 						life easier and better."
 						link="https://www.coursera.org/account/accomplishments/verify/4JEVULALASVF"
-						img=""
+						img="./src/assets/images/Coursera-Logo.png"
 					/>
 					<br />
 					<EducationCard
@@ -49,7 +49,7 @@ export default class Experiences extends Component {
 						decision making. This career thought me about how to use information technologies for making human
 						life easier and better."
 						link="https://platzi.com/p/JuanJo/curso/1670-angular/diploma/detalle/"
-						img=""
+						img="./src/assets/images/Platzi-Logo.jpg"
 					/>
 					<br />
 				</div>
