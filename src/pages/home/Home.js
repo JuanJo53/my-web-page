@@ -5,15 +5,15 @@ class Home extends React.Component {
 		return (
 			<div id="home" className="container home-container">
 				<div className="row align-items-center">
-					<div className="col">
+					<div className="col-auto col-sm-auto col-lg-6 col-md-auto">
 						<h1 className="font-weight-bold">Hi! I´m Juan Jo. A systems engineer.</h1>
 						<h3>
 							I´m also a software engineer that really really loves to build tecnology. A true believer that every
 							problem can be solved with software and tecnology.
 						</h3>
 					</div>
-					<div className="col">
-						<img className="img-logo" src="./src/assets/images/Logo-turquesa-claro.png" alt="logo" />
+					<div className="col-auto col-sm-auto col-lg-6 col-md-auto">
+						<img className="img-logo img-fluid" src="./src/assets/images/Logo-turquesa-claro.png" alt="logo" />
 					</div>
 				</div>
 			</div>
