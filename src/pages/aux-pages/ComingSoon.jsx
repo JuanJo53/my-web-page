@@ -5,7 +5,7 @@ import "../../styles/ComingSoon.scss";
 class ComingSoon extends Component {
 	state = {
 		countdown: {
-			futureDate: "2020-12-31 00:00:00"
+			futureDate: "2021-06-30 00:00:00"
 		}
 	};
 	render() {
