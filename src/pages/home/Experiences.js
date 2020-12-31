@@ -6,10 +6,6 @@ import ProjectCards from "../../components/ProjectCards";
 
 import "../../styles/Experiences.scss";
 
-import UcbLogo from "../../assets/images/UCBlogo.png";
-import PlatziLogo from "../../assets/images/Platzi-Logo.jpg";
-import CourseraLogo from "../../assets/images/Coursera-Logo.png";
-
 import { db } from "../../firebase-config";
 
 export default function Experiences() {
@@ -47,7 +43,7 @@ export default function Experiences() {
 							edu_detail={edu.edu_detail}
 							edu_desc={edu.edu_description}
 							link={edu.organization_link}
-							img={UcbLogo}
+							img={edu.organization_img}
 							id={edu.id}
 						/>
 					);
