@@ -119,8 +119,9 @@ export default class Contact extends Component {
 					</small>
 					<br />
 					<small>
-						My awesome logo was made by: <a href="">Kurlangas</a>
+						My awesome logo was made by: <a href="mailto: enrique.gutierrez.davila@gmail.com">Enrique Gutierrez</a>
 					</small>
+					<small> a.k.a Kurlangas</small>
 				</div>
 			</div>
 		);
