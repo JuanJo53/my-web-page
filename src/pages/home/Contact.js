@@ -114,8 +114,14 @@ export default class Contact extends Component {
 				</div>
 				<div className="contact-footer">
 					<small>
-						This website was fully made by me, using <a href="https://reactjs.org/">ReactJS</a> and{" "}
-						<a href="https://getbootstrap.com/">Bootstrap</a>
+						This website was fully made by me, using{" "}
+						<a href="https://reactjs.org/" target="_blank">
+							ReactJS
+						</a>{" "}
+						and{" "}
+						<a href="https://getbootstrap.com/" target="_blank">
+							Bootstrap
+						</a>
 					</small>
 					<br />
 					<small>
