@@ -21,7 +21,6 @@ export default function ProjectCards() {
 		// const fileUrl = storageRef.getDownloadURL();
 		// console.log(fileUrl);
 	}, []);
-
 	return (
 		<div className="project-card-container">
 			<div className="row row-cols-1 row-cols-md-3 g-4">
@@ -33,9 +32,13 @@ export default function ProjectCards() {
 								<div className="card-body project-card-body">
 									<h5 className="card-title">{project.project_title}</h5>
 									<p className="card-text">{project.project_description}</p>
-									<a href={project.project_link} target="_blank">
-										Visita el proyecto...
-									</a>
+									{project.project_link ? (
+										!""
+									) : (
+										<a href={project.project_link} target="_blank">
+											Visita el proyecto...
+										</a>
+									)}
 								</div>
 								<div className="card-footer">
 									{project.project_tech_used.map(tech => {
