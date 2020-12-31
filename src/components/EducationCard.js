@@ -27,6 +27,7 @@ export default function EducationCard(props) {
 					</div>
 				</Card.Body>
 			</Card>
+			<br />
 		</div>
 	);
 }
