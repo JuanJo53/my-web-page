@@ -3,7 +3,7 @@ import "../../styles/Home.scss";
 class Home extends React.Component {
 	render() {
 		return (
-			<div id="home" className="container home-container">
+			<div className="container home-container">
 				<div className="row align-items-center">
 					<div className="col-auto col-sm-auto col-lg-6 col-md-auto">
 						<h1 className="font-weight-bold">Hi! I´m Juan Jo. A systems engineer.</h1>

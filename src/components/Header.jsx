@@ -9,7 +9,7 @@ import "./../styles/Navbar.scss";
 import { Navbar, NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
 
 const Header = () => (
-	<Navbar collapseOnSelect expand="lg" variant="dark" className="Navbar">
+	<Navbar id="home" collapseOnSelect expand="lg" variant="dark" className="Navbar">
 		<div className="container justify-content-md-center">
 			<Link className="navbar-brand" to="/">
 				<img src="./src/assets/images/brand-logo/Logo-blanco-small.png" alt="jjfd_logo" />
