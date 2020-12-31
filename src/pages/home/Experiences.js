@@ -6,7 +6,7 @@ import ProjectCards from "../../components/ProjectCards";
 
 import "../../styles/Experiences.scss";
 
-import { db } from "../../firebase-config";
+import { db, storage } from "../../firebase-config";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
@@ -23,6 +23,9 @@ export default function Experiences() {
 
 	useEffect(() => {
 		getEducations();
+		// const storageRef = storage.ref("organizations-logos/Coursera-Logo.png");
+		// const fileUrl = storageRef.getDownloadURL();
+		// console.log(fileUrl);
 	}, []);
 
 	return (
