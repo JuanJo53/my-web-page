@@ -22,7 +22,7 @@ export default function EducationCard(props) {
 						</Card.Title>
 						<Card.Text className="org-about-text">{props.edu_desc}</Card.Text>
 						<Card.Link href={props.link} target="_blank">
-							Organization´s web site
+							Organization´s web site/Certificate Link
 						</Card.Link>
 					</div>
 				</Card.Body>
