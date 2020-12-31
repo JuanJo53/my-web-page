@@ -1,6 +1,7 @@
 .contact-container {
 	height: auto;
-	padding-top: 60px;
+	padding: 60px;
+	// background-color: #598392;
 }
 .contact-header {
 	margin: 40px;
@@ -8,6 +9,23 @@
 	align-items: center;
 	text-align: center;
 }
+.contact-content {
+	margin: 40px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.contact-footer {
+	text-align: center;
+}
+.social-icons {
+	margin: 8px;
+}
 .contact-title {
 	font-weight: bold !important;
+}
+
+.disabled-links [disabled] {
+	/* don't let button block mouse events from reaching wrapper */
+	pointer-events: none;
 }

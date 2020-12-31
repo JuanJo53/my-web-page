@@ -12,7 +12,7 @@ const Header = () => (
 	<Navbar collapseOnSelect expand="lg" variant="dark" className="Navbar sticky-top ">
 		<div className="container justify-content-md-center">
 			<Link className="navbar-brand" to="/">
-				<img src="./src/assets/images/Logo-blanco-small.png" alt="jjfd_logo" />
+				<img src="./src/assets/images/brand-logo/Logo-blanco-small.png" alt="jjfd_logo" />
 			</Link>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav">
 				<Menu className="menuIcon" fontSize="large" />
@@ -50,14 +50,26 @@ const Header = () => (
 				</ul>
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
-						<Link className="nav-link navlinks disabled" to="/blog">
-							BLOG
-						</Link>
+						<div
+							data-bs-toggle="tooltip"
+							data-bs-placement="bottom"
+							title="This amazing content will be available soon!"
+						>
+							<Link className="nav-link navlinks disabled" to="/blog">
+								BLOG
+							</Link>
+						</div>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link navlinks disabled" to="/courses">
-							MY COURSES
-						</Link>
+						<div
+							data-bs-toggle="tooltip"
+							data-bs-placement="bottom"
+							title="This amazing content will be available soon!"
+						>
+							<Link className="nav-link navlinks disabled" to="/courses">
+								MY COURSES
+							</Link>
+						</div>
 					</li>
 				</ul>
 				<ul className="navbar-nav mr-auto">

@@ -65,7 +65,7 @@ export default function ProjectCards() {
 						<img src="./src/assets/images/fluttercalc.png" className="card-img-top" alt="flutter-calculator"></img>
 						<div className="card-body project-card-body">
 							<h5 className="card-title">Flutter Calculator</h5>
-							<p className="card-text">This is simple scientific calculator made with Flutter.</p>
+							<p className="card-text">This is simple scientific calculator builded with Flutter.</p>
 						</div>
 						<div className="card-footer">
 							<small className="text-muted">Flutter</small>
