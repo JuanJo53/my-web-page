@@ -32,7 +32,18 @@ function LandingHome() {
 			</Slide>
 			<Profile />
 			<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
-				<div className="down-button row justify-content-center">
+				<div className="up-button row justify-content-end">
+					<div className="col-0">
+						<Scroll to="home" smooth={true}>
+							<IconButton>
+								<Icon.ChevronUp size={50} color="white" />
+							</IconButton>
+						</Scroll>
+					</div>
+				</div>
+			</Slide>
+			<Slide direction="up" in={checked} {...(checked ? { timeout: 1000 } : {})} mountOnEnter unmountOnExit>
+				<div className="down-button row justify-content-end">
 					<div className="col-0">
 						<Scroll to="experiences" smooth={true}>
 							<IconButton>
