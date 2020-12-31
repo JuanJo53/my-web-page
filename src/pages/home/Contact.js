@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import { Navbar, NavDropdown } from "react-bootstrap";
 import "../../styles/Contact.scss";
+
+import Logo from "../../assets/images/brand-logo/Logo-turquesa-small.png";
 export default class Contact extends Component {
 	render() {
 		return (
@@ -109,7 +111,7 @@ export default class Contact extends Component {
 						</a>
 					</div>
 					<div className="contact-logo">
-						<img src="./src/assets/images/brand-logo/Logo-turquesa-small.png" alt="jjfd_logo" />
+						<img src={Logo} alt="jjfd_logo" />
 					</div>
 				</div>
 				<div className="contact-footer">

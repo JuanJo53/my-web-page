@@ -3,6 +3,8 @@ import React, { Component, useState, useEffect } from "react";
 import "../../styles/Profile.scss";
 
 import { Card, Button } from "react-bootstrap";
+
+import ProfilePhoto from "../../assets/images/profile.jpg";
 class Home extends React.Component {
 	render() {
 		return (
@@ -15,7 +17,7 @@ class Home extends React.Component {
 				<Card className="card container profile-card text-sm-center text-lg-left text-center">
 					<Card.Body className="row justify-content-md-center justify-content-center justify-content-sm-center card-body profile-card-body">
 						<div className="col-8 col-md-4 profile-img">
-							<Card.Img src="./src/assets/images/profile.jpg" className="img-fluid" />
+							<Card.Img src={ProfilePhoto} className="img-fluid" />
 						</div>
 						<div className="col-8 col-md-4 profile-details">
 							<Card.Title as="h2" className="profile-details-title">

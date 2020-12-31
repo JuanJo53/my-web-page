@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 
 import "./../styles/Navbar.scss";
 import { Navbar, NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
-
+import logo from "../assets/images/brand-logo/Logo-blanco-small.png";
 const Header = () => (
 	<Navbar id="home" collapseOnSelect expand="lg" variant="dark" className="Navbar">
 		<div className="container justify-content-md-center">
 			<Link className="navbar-brand" to="/">
-				<img src="./src/assets/images/brand-logo/Logo-blanco-small.png" alt="jjfd_logo" />
+				<img src={logo} alt="jjfd_logo" />
 			</Link>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav">
 				<Menu className="menuIcon" fontSize="large" />

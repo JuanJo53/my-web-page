@@ -1,5 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import "../../styles/Home.scss";
+
+import logo from "../../assets/images/brand-logo/Logo-turquesa-claro.png";
 class Home extends React.Component {
 	render() {
 		return (
@@ -13,11 +15,7 @@ class Home extends React.Component {
 						</h3>
 					</div>
 					<div className="col-auto col-sm-auto col-lg-6 col-md-auto">
-						<img
-							className="img-logo img-fluid"
-							src="./src/assets/images/brand-logo/Logo-turquesa-claro.png"
-							alt="logo"
-						/>
+						<img className="img-logo img-fluid" src={logo} alt="logo" />
 					</div>
 				</div>
 			</div>

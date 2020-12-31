@@ -5,6 +5,10 @@ import WorkCard from "../../components/WorkCard";
 import ProjectCards from "../../components/ProjectCards";
 
 import "../../styles/Experiences.scss";
+
+import UcbLogo from "../../assets/images/UCBlogo.png";
+import PlatziLogo from "../../assets/images/Platzi-Logo.jpg";
+import CourseraLogo from "../../assets/images/Coursera-Logo.png";
 export default class Experiences extends Component {
 	render() {
 		return (
@@ -25,7 +29,7 @@ export default class Experiences extends Component {
 						decision making. This career thought me about how to use information technologies for making human
 						life easier and better."
 						link="https://www.ucb.edu.bo/"
-						img="./src/assets/images/UCBlogo.png"
+						img={UcbLogo}
 					/>
 					<br />
 					<EducationCard
@@ -37,7 +41,7 @@ export default class Experiences extends Component {
 						decision making. This career thought me about how to use information technologies for making human
 						life easier and better."
 						link="https://www.coursera.org/account/accomplishments/verify/4JEVULALASVF"
-						img="./src/assets/images/Coursera-Logo.png"
+						img={CourseraLogo}
 					/>
 					<br />
 					<EducationCard
@@ -49,7 +53,7 @@ export default class Experiences extends Component {
 						decision making. This career thought me about how to use information technologies for making human
 						life easier and better."
 						link="https://platzi.com/p/JuanJo/curso/1670-angular/diploma/detalle/"
-						img="./src/assets/images/Platzi-Logo.jpg"
+						img={PlatziLogo}
 					/>
 					<br />
 				</div>

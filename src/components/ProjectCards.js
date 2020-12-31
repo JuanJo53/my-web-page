@@ -2,13 +2,18 @@ import React from "react";
 
 import { Card, CardGroup, CardDeck } from "react-bootstrap";
 
+import FlutterCalScreen from "../assets/images/fluttercalc.png";
+import PlataformaScreen from "../assets/images/plataforma-ucb.jpg";
+import RAVScreen from "../assets/images/rav.jpg";
+import PrintaloScreen from "../assets/images/printalo.jpg";
+
 export default function ProjectCards() {
 	return (
 		<div className="project-card-container">
 			<div className="row row-cols-1 row-cols-md-3 g-4">
 				<div className="col">
 					<div className="card h-100 project-card">
-						<img src="./src/assets/images/printalo.jpg" className="card-img-top" alt="printalo-screenshot"></img>
+						<img src={PrintaloScreen} className="card-img-top" alt="printalo-screenshot"></img>
 						<div className="card-body project-card-body">
 							<h5 className="card-title">Printalo</h5>
 							<p className="card-text">
@@ -29,7 +34,7 @@ export default function ProjectCards() {
 				</div>
 				<div className="col">
 					<div className="card h-100 project-card">
-						<img src="./src/assets/images/rav.jpg" className="card-img-top" alt="RAV-screenshot"></img>
+						<img src={RAVScreen} className="card-img-top" alt="RAV-screenshot"></img>
 						<div className="card-body project-card-body">
 							<h5 className="card-title">RAV-Web</h5>
 							<p className="card-text">
@@ -47,7 +52,7 @@ export default function ProjectCards() {
 				</div>
 				<div className="col">
 					<div className="card h-100 project-card">
-						<img src="./src/assets/images/plataforma-ucb.jpg" className="card-img-top" alt="plataforma-ucb"></img>
+						<img src={PlataformaScreen} className="card-img-top" alt="plataforma-ucb"></img>
 						<div className="card-body project-card-body">
 							<h5 className="card-title">Plataforma Idiomas UCB</h5>
 							<p className="card-text">
@@ -62,7 +67,7 @@ export default function ProjectCards() {
 				</div>
 				<div className="col">
 					<div className="card h-100 project-card ">
-						<img src="./src/assets/images/fluttercalc.png" className="card-img-top" alt="flutter-calculator"></img>
+						<img src={FlutterCalScreen} className="card-img-top" alt="flutter-calculator"></img>
 						<div className="card-body project-card-body">
 							<h5 className="card-title">Flutter Calculator</h5>
 							<p className="card-text">This is simple scientific calculator builded with Flutter.</p>
