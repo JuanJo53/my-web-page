@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
+
 import "../../styles/Home.scss";
 
 import logo from "../../assets/images/brand-logo/Logo-turquesa-claro.png";

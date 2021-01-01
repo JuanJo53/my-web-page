@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-import { db, storage } from "../firebase-config";
+import { getAllProjects } from "../services/ProjectsService";
 
 export default function ProjectCards() {
 	const [projectsData, setProjectsData] = useState([]);
 
-	const getProjects = () => {
-		db.collection("projects").onSnapshot(querySnapshot => {
-			const docs = [];
-			querySnapshot.forEach(doc => {
-				docs.push({ ...doc.data(), id: doc.id });
-			});
-			setProjectsData(docs);
-		});
-	};
-
 	useEffect(() => {
-		getProjects();
+		const docs = getAllProjects();
+		setProjectsData(docs);
+
 		// const storageRef = storage.ref("organizations-logos/Coursera-Logo.png");
 		// const fileUrl = storageRef.getDownloadURL();
 		// console.log(fileUrl);
