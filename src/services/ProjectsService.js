@@ -5,7 +5,6 @@ export const getAllProjects = () => {
 	db.collection("projects").onSnapshot(querySnapshot => {
 		querySnapshot.forEach(doc => {
 			docs.push({ ...doc.data(), id: doc.id });
-			const cor = 1;
 		});
 	});
 	return docs;
