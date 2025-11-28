@@ -70,3 +70,19 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 # my-web-page
 
 This is the source code of my personal web page and blog. This proyecto uses React.js.
+
+## Tech Stack
+
+This project is built with a modern JavaScript stack:
+
+- **Frontend:**
+  - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+  - [React Router](https://reactrouter.com/) for declarative routing.
+  - [Material-UI](https://material-ui.com/) and [React Bootstrap](https://react-bootstrap.github.io/) for UI components.
+  - [Font Awesome](https://fontawesome.com/) for icons.
+  - [Sass](https://sass-lang.com/) for CSS preprocessing.
+- **Backend:**
+  - [Firebase](https://firebase.google.com/) - Used for services like Authentication, Firestore Database, and Storage.
+- **Build Tools & Development:**
+  - [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) for bundling and transpiling.
+  - [ESLint](https://eslint.org/) for code linting.
