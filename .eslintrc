@@ -17,8 +17,19 @@
 		"expect": true,
 		"sinon": true
 	},
-	"parser": "babel-eslint",
-	"plugins": ["react", "jsx-a11y", "import"],
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": 2021,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"requireConfigFile": false,
+		"babelOptions": {
+			"presets": ["@babel/preset-react"]
+		}
+	},
+	"plugins": ["react", "react-hooks", "jsx-a11y", "import"],
 	"rules": {
 		"react/jsx-filename-extension": 0,
 		"array-bracket-spacing": 2,
@@ -177,7 +188,9 @@
 		"react/forbid-prop-types": 0,
 		"react/prefer-stateless-function": 0,
 		"react/require-default-props": 0,
-		"react/react-in-jsx-scope": 2,
+		"react/react-in-jsx-scope": 0,
+		"react-hooks/rules-of-hooks": 2,
+		"react-hooks/exhaustive-deps": 1,
 		"react/self-closing-comp": 2,
 		"react/sort-comp": 0,
 		"react/jsx-wrap-multilines": 2,

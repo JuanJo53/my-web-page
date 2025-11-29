@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GitHub, LinkedIn, Instagram, Twitter, Menu, Email } from "@material-ui/icons";
+import { GitHub, LinkedIn, Instagram, Twitter, Menu, Email } from "@mui/icons-material";
 
 import { Button, Link as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -41,13 +41,7 @@ export default class Contact extends Component {
 											<Scroll className="dropdown-item" href="#experiences" to="experiences" smooth={true}>
 												EDUCATION
 											</Scroll>
-											<Scroll
-												className="dropdown-item disabled"
-												href="#work"
-												to="work"
-												smooth={true}
-												disabled
-											>
+											<Scroll className="dropdown-item disabled" href="#work" to="work" smooth={true} disabled>
 												WORK
 											</Scroll>
 											<Scroll className="dropdown-item" href="#portfolio" to="portfolio" smooth={true}>
@@ -63,22 +57,14 @@ export default class Contact extends Component {
 								</ul>
 								<ul className="navbar-nav mr-auto">
 									<li className="nav-item">
-										<div
-											data-bs-toggle="tooltip"
-											data-bs-placement="bottom"
-											title="This amazing content will be available soon!"
-										>
+										<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="This amazing content will be available soon!">
 											<Link className="nav-link navlinks disabled disabled-links " to="/blog">
 												BLOG
 											</Link>
 										</div>
 									</li>
 									<li className="nav-item">
-										<div
-											data-bs-toggle="tooltip"
-											data-bs-placement="bottom"
-											title="This amazing content will be available soon!"
-										>
+										<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="This amazing content will be available soon!">
 											<Link className="nav-link navlinks disabled" to="/courses">
 												MY COURSES
 											</Link>
@@ -96,11 +82,7 @@ export default class Contact extends Component {
 						<a className="nav-link" href="https://twitter.com/JuanJo53FD" target="_blank">
 							<Twitter className="socialIcon" fontSize="large" />
 						</a>
-						<a
-							className="nav-link "
-							href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163"
-							target="_blank"
-						>
+						<a className="nav-link " href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163" target="_blank">
 							<LinkedIn className="socialIcon" fontSize="large" />
 						</a>
 						<a className="nav-link " href="https://github.com/JuanJo53" target="_blank">

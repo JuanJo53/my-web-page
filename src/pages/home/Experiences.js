@@ -8,12 +8,13 @@ import "../../styles/Experiences.scss";
 
 import { db, storage } from "../../services/firebase-config";
 import { getAllEducations } from "../../services/EducationsService";
+import { collection, onSnapshot } from "firebase/firestore";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
 
 	const getEducations = () => {
-		db.collection("educations").onSnapshot(querySnapshot => {
+		onSnapshot(collection(db, "educations"), querySnapshot => {
 			const docs = [];
 			querySnapshot.forEach(doc => {
 				docs.push({ ...doc.data(), id: doc.id });

@@ -35,8 +35,8 @@ class Home extends React.Component {
 								About me
 							</Card.Title>
 							<Card.Text className="profile-about-text ">
-								Systems engineer student. Lover of software development. Enthusiastic leader eager to improve
-								everything in his life. Passionate about never stopping learning.
+								Systems engineer student. Lover of software development. Enthusiastic leader eager to improve everything in his
+								life. Passionate about never stopping learning.
 							</Card.Text>
 						</div>
 					</Card.Body>

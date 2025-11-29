@@ -1,32 +1,22 @@
-import React from "react";
-
 import Header from "../components/Header";
 import LandingHome from "../pages/LandingHome";
 
 import ComingSoon from "../pages/aux-pages/ComingSoon";
 import NotFound from "../pages/aux-pages/NotFound";
 
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Header></Header>
-			<Switch>
-				<Route exact path="/">
-					<LandingHome />
-				</Route>
-				<Route exact path="/blog">
-					<ComingSoon />
-				</Route>
-				<Route exact path="/courses">
-					<NotFound />
-				</Route>
-				<Route path="/404">
-					<NotFound />
-				</Route>
-				<Redirect from="*" to="/404" />
-			</Switch>
+			<Routes>
+				<Route path="/" element={<LandingHome />} />
+				<Route path="/blog" element={<ComingSoon />} />
+				<Route path="/courses" element={<NotFound />} />
+				<Route path="/404" element={<NotFound />} />
+				<Route path="*" element={<Navigate to="/404" replace />} />
+			</Routes>
 		</BrowserRouter>
 	);
 }

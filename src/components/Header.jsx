@@ -1,6 +1,6 @@
 import React from "react";
 
-import { GitHub, LinkedIn, Instagram, Twitter, Menu } from "@material-ui/icons";
+import { GitHub, LinkedIn, Instagram, Twitter, Menu } from "@mui/icons-material";
 
 import { Link as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -50,22 +50,14 @@ const Header = () => (
 				</ul>
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
-						<div
-							data-bs-toggle="tooltip"
-							data-bs-placement="bottom"
-							title="This amazing content will be available soon!"
-						>
+						<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="This amazing content will be available soon!">
 							<Link className="nav-link navlinks disabled" to="/blog">
 								BLOG
 							</Link>
 						</div>
 					</li>
 					<li className="nav-item">
-						<div
-							data-bs-toggle="tooltip"
-							data-bs-placement="bottom"
-							title="This amazing content will be available soon!"
-						>
+						<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="This amazing content will be available soon!">
 							<Link className="nav-link navlinks disabled" to="/courses">
 								MY COURSES
 							</Link>
@@ -86,11 +78,7 @@ const Header = () => (
 						</a>
 					</li>
 					<li className="nav-item ">
-						<a
-							className="nav-link "
-							href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163"
-							target="_blank"
-						>
+						<a className="nav-link " href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163" target="_blank">
 							<LinkedIn className="socialIcon" fontSize="large" />
 							<span className="d-lg-none"> LinkedIn Account</span>
 						</a>

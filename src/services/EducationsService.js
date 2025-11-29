@@ -1,8 +1,9 @@
 import { db, storage } from "../services/firebase-config";
+import { collection, onSnapshot } from "firebase/firestore";
 
 export const getAllEducations = () => {
 	const docs = [];
-	db.collection("educations").onSnapshot(querySnapshot => {
+	onSnapshot(collection(db, "educations"), querySnapshot => {
 		querySnapshot.forEach(doc => {
 			docs.push({ ...doc.data(), id: doc.id });
 		});

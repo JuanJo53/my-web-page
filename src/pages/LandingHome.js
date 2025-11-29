@@ -6,7 +6,7 @@ import Experiences from "./home/Experiences";
 import Contact from "./home/Contact";
 
 import { Link as Scroll } from "react-scroll";
-import { IconButton, Slide } from "@material-ui/core";
+import { IconButton, Slide } from "@mui/material";
 import * as Icon from "react-bootstrap-icons";
 
 import "../styles/LandingHome.scss";
