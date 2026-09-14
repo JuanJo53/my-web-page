@@ -1,98 +1,188 @@
-import React from "react";
-
-import { GitHub, LinkedIn, Instagram, Twitter, Menu } from "@mui/icons-material";
-
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { GitHub, Instagram, LinkedIn, Menu, DarkMode, LightMode, Twitter } from "@mui/icons-material";
 
-import "./../styles/Navbar.scss";
-import { Navbar, NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
-import logo from "../assets/images/brand-logo/Logo-blanco-small.png";
-const Header = () => (
-	<Navbar id="home" collapseOnSelect expand="lg" variant="dark" className="Navbar">
-		<div className="container justify-content-md-center">
-			<Link className="navbar-brand" to="/">
-				<img src={logo} alt="jjfd_logo" />
+import { useTheme } from "../context/ThemeContext";
+import darkLogo from "../assets/images/brand-logo/Logo-blanco-small.png";
+import lightLogo from "../assets/images/brand-logo/Logo-turquesa-small.png";
+import "../styles/Navbar.scss";
+
+const SCROLL_OFFSET = -88;
+
+const socialLinks = [
+	{ href: "https://www.instagram.com/juanjo53fd/", label: "Instagram", Icon: Instagram },
+	{ href: "https://twitter.com/JuanJo53FD", label: "Twitter", Icon: Twitter },
+	{ href: "https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163", label: "LinkedIn", Icon: LinkedIn },
+	{ href: "https://github.com/JuanJo53", label: "GitHub", Icon: GitHub }
+];
+
+const Header = () => {
+	const { isDark, handleToggleTheme } = useTheme();
+	const location = useLocation();
+	const [expanded, setExpanded] = useState(false);
+	const isHome = location.pathname === "/";
+	const logo = isDark ? darkLogo : lightLogo;
+
+	const handleCollapse = () => {
+		setExpanded(false);
+	};
+
+	const handleToggleMenu = (nextExpanded) => {
+		setExpanded(nextExpanded);
+	};
+
+	const handleKeyDownToggle = (event) => {
+		if (event.key === "Enter" || event.key === " ") {
+			event.preventDefault();
+			handleToggleTheme();
+		}
+	};
+
+	const renderSectionLink = (target, label) => {
+		if (isHome) {
+			return (
+				<Scroll
+					className="nav-link site-nav-link"
+					to={target}
+					smooth
+					spy
+					duration={500}
+					offset={SCROLL_OFFSET}
+					href={`#${target}`}
+					onClick={handleCollapse}
+				>
+					{label}
+				</Scroll>
+			);
+		}
+
+		return (
+			<Link className="nav-link site-nav-link" to={`/#${target}`} onClick={handleCollapse}>
+				{label}
 			</Link>
-			<Navbar.Toggle aria-controls="responsive-navbar-nav">
-				<Menu className="menuIcon" fontSize="large" />
-			</Navbar.Toggle>
-			<Navbar.Collapse id="responsive-navbar-nav">
-				<ul className="navbar-nav mr-auto align-middle">
-					<li className="nav-item ">
-						<Scroll className="nav-link navlinks" to="home" smooth={true} href="#home">
-							HOME
-						</Scroll>
-					</li>
-					<li className="nav-item">
-						<Scroll className="nav-link navlinks" to="profile" smooth={true} href="#profile">
-							PROFILE
-						</Scroll>
-					</li>
-					<li className="nav-item">
-						<NavDropdown title="EXPERIENCES" id="basic-nav-dropdown">
-							<Scroll className="dropdown-item" href="#experiences" to="experiences" smooth={true}>
-								EDUCATION
-							</Scroll>
-							<Scroll className="dropdown-item disabled" href="#work" to="work" smooth={true} disabled>
-								WORK
-							</Scroll>
-							<Scroll className="dropdown-item" href="#portfolio" to="portfolio" smooth={true}>
-								PORTFOLIO
-							</Scroll>
-						</NavDropdown>
-					</li>
-					<li className="nav-item ">
-						<Scroll className="nav-link navlinks" href="#contact" to="contact" smooth={true}>
-							CONTACT
-						</Scroll>
-					</li>
-				</ul>
-				<ul className="navbar-nav mr-auto">
-					<li className="nav-item">
-						<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="This amazing content will be available soon!">
-							<Link className="nav-link navlinks disabled" to="/blog">
-								BLOG
+		);
+	};
+
+	return (
+		<Navbar
+			expand="lg"
+			expanded={expanded}
+			onToggle={handleToggleMenu}
+			onSelect={handleCollapse}
+			collapseOnSelect
+			className="site-navbar fixed-top"
+			role="navigation"
+			aria-label="Primary"
+		>
+			<Container>
+				<Link className="navbar-brand site-brand" to="/" onClick={handleCollapse} aria-label="Juan Jo home">
+					<img src={logo} alt="Juan Jo logo" />
+				</Link>
+
+				<div className="navbar-toolbar">
+					<button
+						type="button"
+						className="theme-toggle"
+						onClick={handleToggleTheme}
+						onKeyDown={handleKeyDownToggle}
+						aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+						tabIndex={0}
+					>
+						{isDark ? <LightMode fontSize="small" /> : <DarkMode fontSize="small" />}
+						<span className="theme-toggle-label">{isDark ? "Light" : "Night"}</span>
+					</button>
+					<Navbar.Toggle aria-controls="primary-navigation" className="site-nav-toggle">
+						<Menu className="menu-icon" fontSize="large" />
+					</Navbar.Toggle>
+				</div>
+
+				<Navbar.Collapse id="primary-navigation">
+					<Nav className="site-nav-links" as="ul">
+						<li className="nav-item">{renderSectionLink("home", "Home")}</li>
+						<li className="nav-item">{renderSectionLink("profile", "Profile")}</li>
+						<li className="nav-item">
+							<NavDropdown title="Experiences" id="experiences-dropdown" className="site-nav-dropdown">
+								{isHome ? (
+									<>
+										<Scroll
+											className="dropdown-item"
+											to="experiences"
+											smooth
+											duration={500}
+											offset={SCROLL_OFFSET}
+											href="#experiences"
+											onClick={handleCollapse}
+										>
+											Education
+										</Scroll>
+										<span className="dropdown-item disabled" aria-disabled="true">
+											Work
+										</span>
+										<Scroll
+											className="dropdown-item"
+											to="portfolio"
+											smooth
+											duration={500}
+											offset={SCROLL_OFFSET}
+											href="#portfolio"
+											onClick={handleCollapse}
+										>
+											Portfolio
+										</Scroll>
+									</>
+								) : (
+									<>
+										<Link className="dropdown-item" to="/#experiences" onClick={handleCollapse}>
+											Education
+										</Link>
+										<span className="dropdown-item disabled" aria-disabled="true">
+											Work
+										</span>
+										<Link className="dropdown-item" to="/#portfolio" onClick={handleCollapse}>
+											Portfolio
+										</Link>
+									</>
+								)}
+							</NavDropdown>
+						</li>
+						<li className="nav-item">{renderSectionLink("contact", "Contact")}</li>
+					</Nav>
+
+					<Nav className="site-nav-links site-nav-secondary" as="ul">
+						<li className="nav-item">
+							<Link className="nav-link site-nav-link" to="/blog" onClick={handleCollapse}>
+								Blog <span className="soon-badge">Soon</span>
 							</Link>
-						</div>
-					</li>
-					<li className="nav-item">
-						<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="This amazing content will be available soon!">
-							<Link className="nav-link navlinks disabled" to="/courses">
-								MY COURSES
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link site-nav-link" to="/courses" onClick={handleCollapse}>
+								Courses <span className="soon-badge">Soon</span>
 							</Link>
-						</div>
-					</li>
-				</ul>
-				<ul className="navbar-nav mr-auto">
-					<li className="nav-item ">
-						<a className="nav-link link-light" href="https://www.instagram.com/juanjo53fd/" target="_blank">
-							<Instagram className="socialIcon" fontSize="large" />
-							<span className="d-lg-none"> Instagram Account</span>
-						</a>
-					</li>
-					<li className=" nav-item ">
-						<a className="nav-link" href="https://twitter.com/JuanJo53FD" target="_blank">
-							<Twitter className="socialIcon" fontSize="large" />
-							<span className="d-lg-none"> Twitter Account</span>
-						</a>
-					</li>
-					<li className="nav-item ">
-						<a className="nav-link " href="https://www.linkedin.com/in/juan-josé-fernández-duarte-096274163" target="_blank">
-							<LinkedIn className="socialIcon" fontSize="large" />
-							<span className="d-lg-none"> LinkedIn Account</span>
-						</a>
-					</li>
-					<li className="nav-item ">
-						<a className="nav-link " href="https://github.com/JuanJo53" target="_blank">
-							<GitHub className="socialIcon" fontSize="large" />
-							<span className="d-lg-none"> GitHub Account</span>
-						</a>
-					</li>
-				</ul>
-			</Navbar.Collapse>
-		</div>
-	</Navbar>
-);
+						</li>
+					</Nav>
+
+					<Nav className="site-socials" as="ul">
+						{socialLinks.map(({ href, label, Icon }) => (
+							<li className="nav-item" key={label}>
+								<a
+									className="nav-link social-link"
+									href={href}
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label={label}
+								>
+									<Icon className="social-icon" fontSize="medium" />
+									<span className="d-lg-none">{label}</span>
+								</a>
+							</li>
+						))}
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
+	);
+};
 
 export default Header;

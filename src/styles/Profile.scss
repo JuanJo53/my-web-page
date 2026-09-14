@@ -29,11 +29,13 @@ hr.solid {
 	border-top: 2px solid #999;
 }
 .profile-card {
-	background-color: #124559 !important;
+	background-color: var(--color-brand-strong) !important;
+	color: var(--color-on-brand);
 	border-radius: 20px !important;
 }
 .profile-card-body {
-	background-color: #124559;
+	background-color: var(--color-brand-strong);
+	color: var(--color-on-brand);
 	width: 102.8%;
 	border-radius: 20px !important;
 	margin: 10px;
@@ -42,4 +44,12 @@ hr.solid {
 	border-radius: 200px;
 	border-color: #aec3b0;
 	border-width: 20px;
+}
+.profile-card p,
+.profile-card h2,
+.profile-card h5,
+.profile-card .card-title,
+.profile-card .card-subtitle,
+.profile-card .card-text {
+	color: var(--color-on-brand);
 }
