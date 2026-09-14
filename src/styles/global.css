@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
 
 :root {
-	--navbar-height: 4.5rem;
+	--navbar-height: 5.25rem;
 	--font-display: "Outfit", "Segoe UI", sans-serif;
 	--font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
 	--radius-sm: 0.75rem;
 	--radius-md: 1.25rem;
 	--shadow-soft: 0 18px 40px rgba(1, 22, 30, 0.18);
 	--transition-fast: 180ms ease;
+	--content-width: 1160px;
 }
 
 [data-theme="dark"] {
@@ -46,6 +47,11 @@
 	box-sizing: border-box;
 }
 
+.container {
+	width: min(100% - 2.5rem, var(--content-width));
+	margin-inline: auto;
+}
+
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: var(--navbar-height);
@@ -56,7 +62,9 @@ body {
 	font-family: var(--font-body);
 	background-color: var(--color-bg);
 	color: var(--color-text);
-	transition: background-color var(--transition-fast), color var(--transition-fast);
+	transition:
+		background-color var(--transition-fast),
+		color var(--transition-fast);
 }
 
 h1,
@@ -79,6 +87,15 @@ label {
 
 a {
 	color: var(--color-accent);
+}
+
+button,
+a {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
 }
 
 a.link-unstyled {
@@ -126,4 +143,20 @@ a.link-unstyled:hover {
 	color: #fff;
 	background-color: #cd4040;
 	border-color: #cd4040;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	text-decoration: none;
+	transition:
+		background-color var(--transition-fast),
+		border-color var(--transition-fast),
+		transform var(--transition-fast);
+}
+
+.btn:hover {
+	transform: translateY(-2px);
 }

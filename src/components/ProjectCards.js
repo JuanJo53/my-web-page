@@ -15,28 +15,24 @@ export default function ProjectCards() {
 	}, []);
 	return (
 		<div className="project-card-container">
-			<div className="row row-cols-1 row-cols-md-3 g-4">
+			<div className="project-grid">
 				{projectsData.map(project => {
 					return (
-						<div className="col" key={project.id}>
-							<div className="card h-100 project-card">
-								<img src={project.project_img} className="card-img-top" alt="printalo-screenshot"></img>
-								<div className="card-body project-card-body">
-									<h5 className="card-title">{project.project_title}</h5>
-									<p className="card-text">{project.project_description}</p>
-									{project.project_link ? (
-										!""
-									) : (
-										<a href={project.project_link} target="_blank">
-											Visita el proyecto...
-										</a>
-									)}
-								</div>
-								<div className="card-footer">
-									{project.project_tech_used.map(tech => {
-										return <small className="text-muted">{tech}, </small>;
-									})}
-								</div>
+						<div className="project-card" key={project.id}>
+							<img src={project.project_img} className="project-card-image" alt={`${project.project_title} screenshot`} />
+							<div className="project-card-body">
+								<h3>{project.project_title}</h3>
+								<p>{project.project_description}</p>
+								{project.project_link && (
+									<a href={project.project_link} target="_blank" rel="noreferrer">
+										Visita el proyecto...
+									</a>
+								)}
+							</div>
+							<div className="card-footer">
+								{project.project_tech_used.map(tech => {
+									return <small key={tech}>{tech}</small>;
+								})}
 							</div>
 						</div>
 					);

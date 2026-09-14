@@ -1,6 +1,5 @@
 .profile-container {
-	height: 80vh;
-	padding-top: 80px;
+	padding-block: 7rem 4rem;
 }
 .profile-header {
 	margin: 40px;
@@ -36,14 +35,27 @@ hr.solid {
 .profile-card-body {
 	background-color: var(--color-brand-strong);
 	color: var(--color-on-brand);
-	width: 102.8%;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 2rem;
+	padding: 2.5rem;
 	border-radius: 20px !important;
-	margin: 10px;
 }
 .profile-img > img {
+	width: min(100%, 220px);
 	border-radius: 200px;
 	border-color: #aec3b0;
 	border-width: 20px;
+}
+
+@media (max-width: 760px) {
+	.profile-card-body {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.profile-img > img {
+		width: 180px;
+	}
 }
 .profile-card p,
 .profile-card h2,

@@ -1,15 +1,17 @@
 .notfound {
-	margin: 100px;
-	padding-top: var(--navbar-height);
+	padding-block: 8rem 4rem;
+}
+.notfound .aux-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 4rem;
 }
 .fs-1-NT {
 	font-size: 300px;
 }
 .fs-2 {
 	font-size: 50px;
-}
-.btn {
-	margin: 10px;
 }
 .permission_denied .stars {
 	animation: sparkle 1.6s infinite ease-in-out alternate;
@@ -38,6 +40,10 @@
 	}
 }
 @media (max-width: 600px) {
+	.notfound .aux-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
 	.permission_denied h1 {
 		font-size: 75px;
 	}

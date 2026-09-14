@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as Scroll } from "react-scroll";
-import * as Icon from "react-bootstrap-icons";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 import { useTheme } from "../../context/ThemeContext";
 import darkLogo from "../../assets/images/brand-logo/Logo-Blanco.png";
@@ -13,18 +13,17 @@ const Home = () => {
 
 	return (
 		<section id="home" className="hero-section" aria-labelledby="hero-title">
-			<div className="hero-pattern" aria-hidden="true" />
 			<div className="hero-glow" aria-hidden="true" />
 			<div className="container hero-content">
-				<div className="row align-items-center gy-5">
-					<div className="col-lg-6">
+				<div className="hero-grid">
+					<div>
 						<p className="hero-eyebrow">Systems engineer · Software builder</p>
 						<h1 id="hero-title" className="hero-title">
 							Hi, I&apos;m <span className="hero-name">Juan Jo.</span>
 						</h1>
 						<p className="hero-copy">
-							I build technology with a simple belief: every problem can be solved with software. This is my digital CV
-							— a place to see how I work, what I&apos;ve built, and how we can collaborate.
+							I build technology with a simple belief: every problem can be solved with software. This is my digital CV — a place
+							to see how I work, what I&apos;ve built, and how we can collaborate.
 						</p>
 						<div className="hero-actions">
 							<Scroll
@@ -53,7 +52,7 @@ const Home = () => {
 							</Scroll>
 						</div>
 					</div>
-					<div className="col-lg-6 d-flex justify-content-center">
+					<div className="hero-visual-wrap">
 						<div className="hero-visual">
 							<img className="hero-logo" src={heroLogo} alt="Juan Jo brand logo" />
 						</div>
@@ -69,7 +68,7 @@ const Home = () => {
 					aria-label="Scroll to profile"
 					tabIndex={0}
 				>
-					<Icon.ChevronDown size={28} />
+					<KeyboardArrowDown fontSize="medium" />
 					<span>Scroll</span>
 				</Scroll>
 			</div>
