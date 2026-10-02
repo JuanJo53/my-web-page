@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../src/assets/images/brand-logo/logo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#01161e" />
-		<meta name="description" content="Juan José Fernández Duarte — systems engineer and software builder. Digital CV, portfolio, and contact." />
+		<meta name="theme-color" content="#14221f" />
+		<meta
+			name="description"
+			content="Juan José Fernández Duarte — systems engineer and software builder. Digital CV, portfolio, and contact."
+		/>
 		<title>Juan Jo — Resume</title>
 		<script>
 			(function () {
@@ -15,8 +18,8 @@
 						stored === "light" || stored === "dark"
 							? stored
 							: window.matchMedia("(prefers-color-scheme: light)").matches
-							? "light"
-							: "dark";
+								? "light"
+								: "dark";
 					document.documentElement.setAttribute("data-theme", theme);
 				} catch (e) {
 					document.documentElement.setAttribute("data-theme", "dark");

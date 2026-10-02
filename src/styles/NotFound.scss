@@ -79,32 +79,11 @@
 .st0 {
 	fill: none;
 }
-.st1 {
-	fill: #504e55;
-}
-.st2 {
-	fill: #f39e72;
-}
-.st3 {
-	fill: #ffffff;
-}
 .st4 {
 	opacity: 0.24;
 }
-.st5 {
-	fill: #77574e;
-}
-.st6 {
-	fill: #fbd68d;
-}
-.st7 {
-	fill: #ececec;
-}
-.st8 {
-	fill: #f4a89c;
-}
 .st9 {
-	fill: #cfc9e5;
+	fill: var(--color-on-brand);
 }
 .st10 {
 	opacity: 0.28;
@@ -112,30 +91,43 @@
 .st11 {
 	opacity: 0.25;
 }
-.st12 {
-	fill: #6f635c;
-}
-.st13 {
-	fill: #dae7be;
-}
-.st14 {
-	fill: #ffe0a6;
-}
-.st15 {
-	fill: #5f5e60;
-}
-.st16 {
-	fill: #cfe1af;
-}
 .st17 {
-	fill: #ebe9f5;
+	fill: var(--color-on-brand);
 }
-.st18 {
-	fill: #53515a;
+.notfound .st1,
+.notfound .st5,
+.notfound .st12,
+.notfound .st15,
+.notfound .st18,
+.notfound .st20 {
+	fill: var(--color-text);
 }
 .st19 {
 	opacity: 0.42;
 }
-.st20 {
-	fill: #53515b;
+.notfound .st2,
+.notfound .st6,
+.notfound .st14 {
+	fill: var(--color-accent);
+}
+.notfound .st3,
+.notfound .st7,
+.notfound .st9,
+.notfound .st17 {
+	fill: var(--color-on-brand);
+}
+.notfound .st8,
+.notfound .st13,
+.notfound .st16 {
+	fill: var(--color-muted);
+}
+.notfound .saturn,
+.notfound .saturn-2 {
+	fill: var(--color-brand);
+}
+.notfound .hover {
+	fill: var(--color-on-brand);
+}
+.notfound .stars {
+	fill: var(--color-accent);
 }

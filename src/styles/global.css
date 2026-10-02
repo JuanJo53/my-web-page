@@ -4,41 +4,44 @@
 	--navbar-height: 5.25rem;
 	--font-display: "Outfit", "Segoe UI", sans-serif;
 	--font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
+	--font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 	--radius-sm: 0.75rem;
 	--radius-md: 1.25rem;
-	--shadow-soft: 0 18px 40px rgba(1, 22, 30, 0.18);
+	--shadow-soft: 0 18px 40px rgba(12, 32, 25, 0.14);
 	--transition-fast: 180ms ease;
 	--content-width: 1160px;
 }
 
 [data-theme="dark"] {
-	--color-bg: #01161e;
-	--color-bg-elevated: #07202a;
-	--color-surface: rgba(18, 69, 89, 0.72);
-	--color-text: #eff6e0;
-	--color-muted: #aec3b0;
-	--color-brand: #1a7f8e;
-	--color-brand-strong: #124559;
-	--color-accent: #5eead4;
-	--color-on-brand: #eff6e0;
-	--color-border: rgba(174, 195, 176, 0.22);
-	--color-nav-bg: rgba(1, 22, 30, 0.96);
-	--hero-glow: rgba(26, 127, 142, 0.28);
+	--color-bg: #14221f;
+	--color-bg-elevated: #1c2e29;
+	--color-surface: #223a33;
+	--color-text: #f4f2e9;
+	--color-muted: #b2c3b7;
+	--color-brand: #47957a;
+	--color-brand-strong: #286a55;
+	--color-accent: #e8b86d;
+	--color-on-brand: #fffdf5;
+	--color-border: rgba(202, 220, 206, 0.18);
+	--color-nav-bg: rgba(20, 34, 31, 0.94);
+	--color-danger: #d65c55;
+	--hero-glow: rgba(71, 149, 122, 0.2);
 }
 
 [data-theme="light"] {
-	--color-bg: #f4faf7;
-	--color-bg-elevated: #ffffff;
-	--color-surface: #ffffff;
-	--color-text: #01161e;
-	--color-muted: #3a5a66;
-	--color-brand: #124559;
-	--color-brand-strong: #0d3342;
-	--color-accent: #1a7f8e;
-	--color-on-brand: #ffffff;
-	--color-border: rgba(18, 69, 89, 0.14);
-	--color-nav-bg: rgba(244, 250, 247, 0.96);
-	--hero-glow: rgba(26, 127, 142, 0.16);
+	--color-bg: #f5f3ea;
+	--color-bg-elevated: #fffefa;
+	--color-surface: #e9eee5;
+	--color-text: #1b2a25;
+	--color-muted: #5a6b61;
+	--color-brand: #34785f;
+	--color-brand-strong: #205a47;
+	--color-accent: #98601b;
+	--color-on-brand: #fffdf5;
+	--color-border: rgba(32, 90, 71, 0.16);
+	--color-nav-bg: rgba(245, 243, 234, 0.94);
+	--color-danger: #b6403b;
+	--hero-glow: rgba(52, 120, 95, 0.14);
 }
 
 * {
@@ -83,6 +86,16 @@ small,
 li,
 label {
 	color: var(--color-text);
+}
+
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+code {
+	font-family: var(--font-mono);
 }
 
 a {
@@ -140,9 +153,9 @@ a.link-unstyled:hover {
 }
 
 .btn.btn-danger {
-	color: #fff;
-	background-color: #cd4040;
-	border-color: #cd4040;
+	color: var(--color-on-brand);
+	background-color: var(--color-danger);
+	border-color: var(--color-danger);
 }
 
 .btn {

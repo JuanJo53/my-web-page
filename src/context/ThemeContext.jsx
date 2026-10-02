@@ -22,10 +22,12 @@ export const ThemeProvider = ({ children }) => {
 	useEffect(() => {
 		document.documentElement.setAttribute("data-theme", theme);
 		window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+		const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--color-bg").trim();
+		document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColor);
 	}, [theme]);
 
 	const handleToggleTheme = () => {
-		setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
+		setTheme(currentTheme => (currentTheme === "dark" ? "light" : "dark"));
 	};
 
 	const value = useMemo(

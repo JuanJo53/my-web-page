@@ -3,7 +3,7 @@
 	margin-top: 50px;
 }
 .countdown div:not(:last-child) {
-	border-right: 2px solid #598392;
+	border-right: 2px solid var(--color-accent);
 }
 .countdown-segment-number {
 	font-size: 30px;

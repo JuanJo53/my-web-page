@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../styles/Profile.scss";
 
-import ProfilePhoto from "../../assets/images/profile.jpg";
+import ProfilePhoto from "../../assets/images/profile_pic.png";
 
 class Home extends React.Component {
 	render() {
@@ -15,24 +15,33 @@ class Home extends React.Component {
 				</div>
 				<div className="profile-card">
 					<div className="profile-card-body">
-						<div className="profile-img">
-							<img src={ProfilePhoto} alt="Juan José Fernández Duarte" />
-						</div>
-						<div className="profile-details">
-							<h2 className="profile-details-title">Details</h2>
-							<h5 className="profile-details-subtitle">Name:</h5>
-							<p className="profile-details-text">Juan José Fernández Duarte</p>
-							<h5 className="profile-details-subtitle">Age:</h5>
-							<p className="profile-details-text">21 years</p>
-							<h5 className="profile-details-subtitle">Location:</h5>
-							<p className="profile-details-text">La Paz, Bolivia, Earth</p>
-						</div>
-						<div className="profile-about">
+						<aside className="profile-identity">
+							<div className="profile-img">
+								<img src={ProfilePhoto} alt="Juan José Fernández Duarte" />
+							</div>
+							<h2 className="profile-name">Juan José Fernández Duarte</h2>
+							<p className="profile-role">Software developer</p>
+						</aside>
+						<div className="profile-summary">
 							<h2 className="profile-about-title">About me</h2>
 							<p className="profile-about-text">
-								Systems engineer student. Lover of software development. Enthusiastic leader eager to improve everything in his
-								life. Passionate about never stopping learning.
+								Systems engineering student and software developer, enthusiastic about building useful software, leading with
+								curiosity, and continually learning.
 							</p>
+							<dl className="profile-facts">
+								<div>
+									<dt>Age</dt>
+									<dd>27 years</dd>
+								</div>
+								<div>
+									<dt>Location</dt>
+									<dd>La Paz, Bolivia, Earth</dd>
+								</div>
+								<div>
+									<dt>Currently</dt>
+									<dd>Systems Engineer, expanding to Data Engineering</dd>
+								</div>
+							</dl>
 						</div>
 					</div>
 				</div>
