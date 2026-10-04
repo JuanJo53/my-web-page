@@ -39,7 +39,7 @@ class Home extends React.Component {
 								</div>
 								<div>
 									<dt>Currently</dt>
-									<dd>Systems Engineer, expanding to Data Engineering</dd>
+									<dd>Systems Engineer, expanding into Data Engineering</dd>
 								</div>
 							</dl>
 						</div>
