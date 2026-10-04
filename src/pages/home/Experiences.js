@@ -44,20 +44,22 @@ export default function Experiences() {
 			</div>
 			<div className="experiences-education">
 				<h2 className="experiences-titles">Education</h2>
-				{eduData.map(edu => {
-					return (
-						<EducationCard
-							key={edu.id}
-							organization={edu.organization_name}
-							time={edu.time_spent}
-							edu_detail={edu.edu_detail}
-							edu_desc={edu.edu_description}
-							link={edu.organization_link}
-							img={edu.organization_img}
-							id={edu.id}
-						/>
-					);
-				})}
+				<div className="education-list">
+					{eduData.map(edu => {
+						return (
+							<EducationCard
+								key={edu.id}
+								organization={edu.organization_name}
+								time={edu.time_spent}
+								edu_detail={edu.edu_detail}
+								edu_desc={edu.edu_description}
+								link={edu.organization_link}
+								img={edu.organization_img}
+								id={edu.id}
+							/>
+						);
+					})}
+				</div>
 			</div>
 			<hr className="solid"></hr>
 
@@ -69,7 +71,6 @@ export default function Experiences() {
 			<div id="portfolio" className="experiences-portfolio">
 				<h2 className="experiences-titles">Portfolio</h2>
 				<ProjectCards />
-				<br />
 			</div>
 			<hr className="solid"></hr>
 		</div>

@@ -2,26 +2,29 @@ import React from "react";
 
 export default function EducationCard(props) {
 	return (
-		<div className="education-card">
-			<article className="experiences-card">
-				<div className="experiences-card-body">
-					<div className="org-summary">
-						<h4 className="org-title">{props.organization}</h4>
-						<p className="org-time-text">{props.time}</p>
-						<div className="org-img">
-							<img src={props.img} alt={`${props.organization} logo`} />
-						</div>
+		<article className="education-card">
+			<div className="education-card-body">
+				<aside className="education-identity">
+					<div className="education-img">
+						<img src={props.img} alt={`${props.organization} logo`} />
 					</div>
-					<div className="org-about">
-						<h4 className="org-title">{props.edu_detail}</h4>
-						<p className="org-about-text">{props.edu_desc}</p>
-						<a href={props.link} target="_blank" rel="noreferrer">
-							Organization´s web site/Certificate Link
-						</a>
-					</div>
+					<h3 className="education-org">{props.organization}</h3>
+					<p className="education-time">{props.time}</p>
+				</aside>
+				<div className="education-summary">
+					<h3 className="education-detail">{props.edu_detail}</h3>
+					<p className="education-desc">{props.edu_desc}</p>
+					<a
+						className="education-link"
+						href={props.link}
+						target="_blank"
+						rel="noreferrer"
+						aria-label={`${props.organization} website or certificate`}
+					>
+						Organization´s web site/Certificate Link
+					</a>
 				</div>
-			</article>
-			<br />
-		</div>
+			</div>
+		</article>
 	);
 }

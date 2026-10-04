@@ -8,36 +8,43 @@ export default function ProjectCards() {
 	useEffect(() => {
 		const docs = getAllProjects();
 		setProjectsData(docs);
-
-		// const storageRef = storage.ref("organizations-logos/Coursera-Logo.png");
-		// const fileUrl = storageRef.getDownloadURL();
-		// console.log(fileUrl);
 	}, []);
+
 	return (
-		<div className="project-card-container">
-			<div className="project-grid">
-				{projectsData.map(project => {
-					return (
-						<div className="project-card" key={project.id}>
-							<img src={project.project_img} className="project-card-image" alt={`${project.project_title} screenshot`} />
-							<div className="project-card-body">
-								<h3>{project.project_title}</h3>
-								<p>{project.project_description}</p>
-								{project.project_link && (
-									<a href={project.project_link} target="_blank" rel="noreferrer">
-										Visita el proyecto...
-									</a>
-								)}
-							</div>
-							<div className="card-footer">
-								{project.project_tech_used.map(tech => {
-									return <small key={tech}>{tech}</small>;
-								})}
-							</div>
+		<div className="project-grid">
+			{projectsData.map(project => {
+				const technologies = project.project_tech_used || [];
+
+				return (
+					<article className="project-card" key={project.id}>
+						<div className="project-card-media">
+							<img src={project.project_img} alt={`${project.project_title} screenshot`} />
 						</div>
-					);
-				})}
-			</div>
+						<div className="project-card-body">
+							<h3 className="project-card-title">{project.project_title}</h3>
+							<p className="project-card-desc">{project.project_description}</p>
+							{project.project_link && (
+								<a
+									className="project-card-link"
+									href={project.project_link}
+									target="_blank"
+									rel="noreferrer"
+									aria-label={`Visit ${project.project_title}`}
+								>
+									Visita el proyecto...
+								</a>
+							)}
+						</div>
+						{technologies.length > 0 && (
+							<ul className="project-card-tech">
+								{technologies.map(tech => (
+									<li key={tech}>{tech}</li>
+								))}
+							</ul>
+						)}
+					</article>
+				);
+			})}
 		</div>
 	);
 }
