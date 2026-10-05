@@ -9,6 +9,78 @@
 	gap: 1.5rem;
 	margin-top: 1.5rem;
 }
+.certifications-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+#education .education-list {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.certification-card {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+}
+.certification-card .project-card-body {
+	align-items: flex-start;
+}
+.certification-card-media {
+	display: grid;
+	place-items: center;
+	min-height: 150px;
+}
+.certification-card-media img {
+	display: block;
+	width: 100%;
+	max-height: 190px;
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
+	padding: 1rem;
+}
+.certification-card-organization,
+.certification-card-dates {
+	margin: 0.75rem 0 0;
+	color: var(--color-muted);
+}
+.certification-card-organization {
+	font-weight: 600;
+}
+.certification-card-organization a {
+	color: var(--color-accent);
+}
+.certification-card-dates {
+	font-size: 0.9rem;
+}
+.certification-card .project-card-link {
+	margin-top: auto;
+}
+.certification-card-media img {
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
+	padding: 1rem;
+}
+.certification-card .project-card-body {
+	align-items: flex-start;
+}
+.certification-card-organization,
+.certification-card-dates {
+	margin: 0.75rem 0 0;
+	color: var(--color-muted);
+}
+.certification-card-organization {
+	font-weight: 600;
+}
+.certification-card-organization a {
+	color: var(--color-accent);
+}
+.certification-card-dates {
+	font-size: 0.9rem;
+}
+.certification-card .project-card-link {
+	margin-top: auto;
+}
 .education-card {
 	background: var(--color-bg-elevated);
 	color: var(--color-text);
@@ -444,14 +516,18 @@
 	font-weight: 600;
 }
 @media (max-width: 980px) {
-	.project-grid {
+	.project-grid,
+	.certifications-list,
+	#education .education-list {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 @media (max-width: 760px) {
 	.education-card-body,
 	.experiences-card-body,
-	.project-grid {
+	.project-grid,
+	.certifications-list,
+	#education .education-list {
 		grid-template-columns: 1fr;
 	}
 	.education-card-body {

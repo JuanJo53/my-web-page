@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import EducationCard from "../../components/EducationCard";
 import WorkCard from "../../components/WorkCard";
 import ProjectCard from "../../components/ProjectCard";
+import CertificationCard from "../../components/CertificationCard";
 
 import "../../styles/Experiences.scss";
 
@@ -67,22 +68,20 @@ export default function Experiences() {
 			<div id="education" className="experiences-education">
 				<h3 className="experiences-titles">Education</h3>
 				<div className="education-list">
-					{/* {certificatesData.map(certificate => {
+					{certificatesData.map(certificate => {
 						return (
-							<EducationCard
+							<CertificationCard
 								key={certificate.id}
-								school={certificate.school}
-								end_date={certificate.end_date}
-								degree={certificate.degree}
-								field_of_study={certificate.field_of_study}
 								description={certificate.description}
+								exped_date={certificate.exped_date}
+								expiry_date={certificate.expiry_date}
+								name={certificate.name}
+								organization={certificate.organization}
 								url={certificate.url}
-								start_date={certificate.start_date}
-								skills={certificate.skills}
 								id={certificate.id}
 							/>
 						);
-					})} */}
+					})}
 				</div>
 			</div>
 			<hr className="solid"></hr>
