@@ -150,6 +150,155 @@
 .experiences-work {
 	padding-top: clamp(3rem, 8vw, 6.25rem);
 }
+.work-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+	gap: 1.25rem;
+	margin-top: 1.5rem;
+}
+.work-card {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	overflow: hidden;
+	background: var(--color-bg-elevated);
+	color: var(--color-text);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-soft);
+}
+.work-card-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.5rem;
+	border-bottom: 1px solid var(--color-border);
+}
+.work-card-company {
+	display: flex;
+	min-width: 0;
+	align-items: center;
+	gap: 1rem;
+}
+.work-card-logo {
+	display: grid;
+	width: 3.75rem;
+	height: 3.75rem;
+	flex: 0 0 auto;
+	place-items: center;
+	overflow: hidden;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+	color: var(--color-accent);
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.work-card-logo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0.3rem;
+	object-fit: contain;
+}
+.work-card-heading {
+	min-width: 0;
+}
+.work-card-company-name,
+.work-card-position {
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+.work-card-company-name {
+	font-size: 1.15rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+.work-card-position {
+	margin-top: 0.3rem;
+	color: var(--color-accent);
+	font-weight: 600;
+}
+.work-card-dates {
+	flex: 0 0 auto;
+	margin: 0.15rem 0 0;
+	color: var(--color-muted);
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-align: right;
+}
+.work-card-body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+	padding: 1.5rem;
+}
+.work-card-description {
+	margin: 0;
+	color: var(--color-muted);
+	line-height: 1.65;
+	white-space: pre-line;
+}
+.work-card-details {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.85rem;
+	padding: 1rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+}
+.work-card-detail {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	gap: 0.2rem;
+	overflow-wrap: anywhere;
+	font-size: 0.95rem;
+}
+.work-card-detail-label {
+	color: var(--color-muted);
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+.work-card-detail a {
+	color: var(--color-accent);
+	font-weight: 600;
+}
+.work-card-skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.work-card-skills li {
+	padding: 0.3rem 0.75rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: 999px;
+	color: var(--color-muted);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+.work-card-link {
+	margin-top: auto;
+	color: var(--color-accent);
+	font-weight: 700;
+	text-decoration: none;
+}
+.work-card-link:hover,
+.work-card-link:focus {
+	text-decoration: underline;
+}
 .experiences-portfolio {
 	padding-top: clamp(3rem, 8vw, 6.25rem);
 }
@@ -324,6 +473,10 @@
 		gap: 1.25rem;
 		padding: 1.5rem;
 	}
+	.work-card-header,
+	.work-card-body {
+		padding: 1.25rem;
+	}
 	.project-grid {
 		gap: 1rem;
 	}
@@ -350,6 +503,19 @@
 	}
 	.experiences-card-body {
 		padding: 1rem;
+	}
+	.work-list {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.work-card-header {
+		flex-direction: column;
+		gap: 0.65rem;
+	}
+	.work-card-dates {
+		text-align: left;
+	}
+	.work-card-details {
+		grid-template-columns: minmax(0, 1fr);
 	}
 	.project-grid {
 		grid-template-columns: minmax(0, 1fr);

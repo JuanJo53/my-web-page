@@ -8,18 +8,21 @@ import "../../styles/Experiences.scss";
 
 import { getAllEducations } from "../../services/EducationsService";
 import { getAllProjects } from "../../services/ProjectsService";
+import { getAllWorkExperiences } from "../../services/WorkService";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
-	const [workData, setWorkData] = useState([]);
 	const [projectData, setProjectData] = useState([]);
+	const [workExperiencesData, setWorkExperiences] = useState([]);
 
 	useEffect(() => {
 		const unsubscribeEducation = getAllEducations(setEduData);
 		const unsubscribeProjects = getAllProjects(setProjectData);
+		const unsubscribeWorkExperiences = getAllWorkExperiences(setWorkExperiences);
 		return () => {
 			unsubscribeEducation();
 			unsubscribeProjects();
+			unsubscribeWorks();
 		};
 	}, []);
 
@@ -31,13 +34,33 @@ export default function Experiences() {
 				<hr className="solid"></hr>
 			</div>
 
-			{/* <div id="work" className="experiences-work">
+			<div id="work" className="experiences-work">
 				<h3 className="experiences-titles">Work Experiences</h3>
-				<WorkCard />
+				<div className="work-list">
+					{workExperiencesData.map(work => {
+						return (
+							<WorkCard
+								key={work.id}
+								company={work.company}
+								position={work.position}
+								title={work.title}
+								start_date={work.start_date}
+								end_date={work.end_date}
+								description={work.description}
+								employment_type={work.employment_type}
+								currently_working={work.currently_working}
+								location={work.location}
+								time_spent={work.time_spent}
+								skills={work.skills}
+								id={work.id}
+							/>
+						);
+					})}
+				</div>
 				<hr className="solid"></hr>
-			</div> */}
+			</div>
 
-			<div className="experiences-education">
+			<div id="education" className="experiences-education">
 				<h3 className="experiences-titles">Education</h3>
 				<div className="education-list">
 					{eduData.map(education => {
