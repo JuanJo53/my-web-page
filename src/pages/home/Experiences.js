@@ -9,20 +9,24 @@ import "../../styles/Experiences.scss";
 import { getAllEducations } from "../../services/EducationsService";
 import { getAllProjects } from "../../services/ProjectsService";
 import { getAllWorkExperiences } from "../../services/WorkService";
+import { getAllCertificates } from "../../services/CertificatesService";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
 	const [projectData, setProjectData] = useState([]);
 	const [workExperiencesData, setWorkExperiences] = useState([]);
+	const [certificatesData, setCertificatesData] = useState([]);
 
 	useEffect(() => {
 		const unsubscribeEducation = getAllEducations(setEduData);
 		const unsubscribeProjects = getAllProjects(setProjectData);
 		const unsubscribeWorkExperiences = getAllWorkExperiences(setWorkExperiences);
+		const unsubscribeCertificates = getAllCertificates(setCertificatesData);
 		return () => {
 			unsubscribeEducation();
 			unsubscribeProjects();
-			unsubscribeWorks();
+			unsubscribeWorkExperiences();
+			unsubscribeCertificates();
 		};
 	}, []);
 
@@ -63,6 +67,29 @@ export default function Experiences() {
 			<div id="education" className="experiences-education">
 				<h3 className="experiences-titles">Education</h3>
 				<div className="education-list">
+					{/* {certificatesData.map(certificate => {
+						return (
+							<EducationCard
+								key={certificate.id}
+								school={certificate.school}
+								end_date={certificate.end_date}
+								degree={certificate.degree}
+								field_of_study={certificate.field_of_study}
+								description={certificate.description}
+								url={certificate.url}
+								start_date={certificate.start_date}
+								skills={certificate.skills}
+								id={certificate.id}
+							/>
+						);
+					})} */}
+				</div>
+			</div>
+			<hr className="solid"></hr>
+
+			<div id="certifications" className="experiences-certifications">
+				<h3 className="experiences-titles">Certifications</h3>
+				<div className="certifications-list">
 					{eduData.map(education => {
 						return (
 							<EducationCard
