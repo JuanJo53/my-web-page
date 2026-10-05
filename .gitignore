@@ -76,3 +76,7 @@ yarn-error.log
 dist/
 
 .firebase/
+
+# Editor settings
+.cursor/
+.continue/

@@ -1,11 +1,15 @@
-import { db, storage } from "../services/firebase-config";
+import { db } from "../services/firebase-config";
+import { collection, onSnapshot } from "firebase/firestore";
 
-export const getAllEducations = () => {
-	const docs = [];
-	db.collection("educations").onSnapshot(querySnapshot => {
-		querySnapshot.forEach(doc => {
-			docs.push({ ...doc.data(), id: doc.id });
-		});
+export const getAllEducations = callback => {
+	return onSnapshot(collection(db, "educations"), querySnapshot => {
+		const docs = querySnapshot.docs.map(doc => ({
+			...doc.data(),
+			id: doc.id,
+		}));
+
+		if (callback) {
+			callback(docs);
+		}
 	});
-	return docs;
 };

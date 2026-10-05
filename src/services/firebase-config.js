@@ -1,8 +1,8 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/storage";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-var firebaseConfig = {
+const firebaseConfig = {
 	apiKey: "AIzaSyBGlHY3ic9bkP4BW44cJ9bghEBVDxeUIgk",
 	authDomain: "my-web-page-b01c7.firebaseapp.com",
 	projectId: "my-web-page-b01c7",
@@ -11,8 +11,9 @@ var firebaseConfig = {
 	appId: "1:760325923658:web:faf60f0c91d9c265d497b3",
 	measurementId: "G-QPTT3JS3N2"
 };
-// Initialize Firebase
-const fb = firebase.initializeApp(firebaseConfig);
 
-export const db = fb.firestore();
-export const storage = fb.storage();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
+export const storage = getStorage(app);

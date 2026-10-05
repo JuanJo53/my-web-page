@@ -1,47 +1,51 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 
 import "../../styles/Profile.scss";
 
-import { Card, Button } from "react-bootstrap";
+import ProfilePhoto from "../../assets/images/profile_pic.png";
 
-import ProfilePhoto from "../../assets/images/profile.jpg";
 class Home extends React.Component {
 	render() {
 		return (
-			<div id="profile" className="container profile-container">
+			<section id="profile" className="container profile-container">
 				<div className="profile-header">
-					<h1 className="profile-title fw-bolder">Profile</h1>
+					<h2 className="profile-title fw-bolder">Profile</h2>
 					<h5 className="profile-desc">I'm a software developer</h5>
 					<hr className="solid"></hr>
 				</div>
-				<Card className="card container profile-card text-sm-center text-lg-left text-center">
-					<Card.Body className="row justify-content-md-center justify-content-center justify-content-sm-center card-body profile-card-body">
-						<div className="col-8 col-md-4 profile-img">
-							<Card.Img src={ProfilePhoto} className="img-fluid" />
+				<div className="profile-card">
+					<div className="profile-card-body">
+						<aside className="profile-identity">
+							<div className="profile-img">
+								<img src={ProfilePhoto} alt="Juan José Fernández Duarte" />
+							</div>
+							<h3 className="profile-name">Juan José Fernández Duarte</h3>
+							<p className="profile-role">Software developer</p>
+						</aside>
+						<div className="profile-summary">
+							<h3 className="profile-about-title">About me</h3>
+							<p className="profile-about-text">
+								Systems engineering student and software developer, enthusiastic about building useful software, leading with
+								curiosity, and continually learning.
+							</p>
+							<dl className="profile-facts">
+								<div>
+									<dt>Age</dt>
+									<dd>27 years</dd>
+								</div>
+								<div>
+									<dt>Location</dt>
+									<dd>La Paz, Bolivia, Earth</dd>
+								</div>
+								<div>
+									<dt>Currently</dt>
+									<dd>Systems Engineer, expanding into Data Engineering</dd>
+								</div>
+							</dl>
 						</div>
-						<div className="col-8 col-md-4 profile-details">
-							<Card.Title as="h2" className="profile-details-title">
-								Details
-							</Card.Title>
-							<Card.Subtitle className="profile-details-subtitle fw-bolder">Name:</Card.Subtitle>
-							<Card.Text className="profile-details-text">Juan José Fernández Duarte</Card.Text>
-							<Card.Subtitle className="profile-details-subtitle">Age:</Card.Subtitle>
-							<Card.Text className="profile-details-text">21 years </Card.Text>
-							<Card.Subtitle className="profile-details-subtitle">Location:</Card.Subtitle>
-							<Card.Text className="profile-details-text ">La Paz, Bolivia, Earth</Card.Text>
-						</div>
-						<div className="col-8 col-md-4 profile-about">
-							<Card.Title as="h2" className="profile-about-title">
-								About me
-							</Card.Title>
-							<Card.Text className="profile-about-text ">
-								Systems engineer student. Lover of software development. Enthusiastic leader eager to improve
-								everything in his life. Passionate about never stopping learning.
-							</Card.Text>
-						</div>
-					</Card.Body>
-				</Card>
-			</div>
+					</div>
+				</div>
+			</section>
 		);
 	}
 }

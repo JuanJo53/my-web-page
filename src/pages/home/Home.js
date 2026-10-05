@@ -1,27 +1,79 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
+import { Link as Scroll } from "react-scroll";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
+import { useTheme } from "../../context/ThemeContext";
+import darkLogo from "../../assets/images/brand-logo/Logo-Blanco.png";
+import lightLogo from "../../assets/images/brand-logo/Logo-turquesa-claro.png";
 import "../../styles/Home.scss";
 
-import logo from "../../assets/images/brand-logo/Logo-turquesa-claro.png";
-class Home extends React.Component {
-	render() {
-		return (
-			<div className="container home-container">
-				<div className="row align-items-center">
-					<div className="col-auto col-sm-auto col-lg-6 col-md-auto">
-						<h1 className="font-weight-bold">Hi! I´m Juan Jo. A systems engineer.</h1>
-						<h3>
-							I´m also a software engineer that really really loves to build tecnology. A true believer that every
-							problem can be solved with software and tecnology.
-						</h3>
+const Home = () => {
+	const { isDark } = useTheme();
+	const heroLogo = isDark ? darkLogo : lightLogo;
+
+	return (
+		<section id="home" className="hero-section" aria-labelledby="hero-title">
+			<div className="hero-glow" aria-hidden="true" />
+			<div className="container hero-content">
+				<div className="hero-grid">
+					<div>
+						<p className="hero-eyebrow">Systems engineer · Software builder</p>
+						<h1 id="hero-title" className="hero-title">
+							Hi, I&apos;m <span className="hero-name">Juan Jo.</span>
+						</h1>
+						<p className="hero-copy">
+							I build technology with a simple belief: every problem can be solved with software. This is my digital CV — a place
+							to see how I work, what I&apos;ve built, and how we can collaborate.
+						</p>
+						<div className="hero-actions">
+							<Scroll
+								className="btn btn-primary"
+								to="profile"
+								smooth
+								duration={500}
+								offset={-88}
+								href="#profile"
+								role="button"
+								tabIndex={0}
+							>
+								View profile
+							</Scroll>
+							<Scroll
+								className="btn btn-secondary"
+								to="contact"
+								smooth
+								duration={500}
+								offset={-88}
+								href="#contact"
+								role="button"
+								tabIndex={0}
+							>
+								Get in touch
+							</Scroll>
+						</div>
 					</div>
-					<div className="col-auto col-sm-auto col-lg-6 col-md-auto">
-						<img className="img-logo img-fluid" src={logo} alt="logo" />
+					<div className="hero-visual-wrap">
+						<div className="hero-visual">
+							<img className="hero-logo" src={heroLogo} alt="Juan Jo brand logo" />
+						</div>
 					</div>
 				</div>
+				<Scroll
+					className="hero-scroll"
+					to="profile"
+					smooth
+					duration={500}
+					offset={-88}
+					href="#profile"
+					aria-label="Scroll to profile"
+					tabIndex={0}
+				>
+					<KeyboardArrowDown fontSize="medium" />
+					<span>Scroll</span>
+				</Scroll>
 			</div>
-		);
-	}
-}
+		</section>
+	);
+};
 
 export default Home;

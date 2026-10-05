@@ -6,15 +6,12 @@ import "../../styles/NotFound.scss";
 export default class NotFound extends Component {
 	render() {
 		return (
-			<div className="notfound container-fluid container-lg">
-				<div className="row align-items-center">
-					<div className="time col col-sm-auto col-lg-4 col-lg-6 col-md-auto">
+			<div className="notfound container">
+				<div className="aux-grid">
+					<div className="time">
 						<svg id="astronaut" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 							<circle cx="256.8" cy="255.3" r="247.9" className="st0" />
-							<path
-								d="M346.4 475H164.9V244.8c0-14 11.4-25.4 25.4-25.4H321c14 0 25.4 11.4 25.4 25.4V475z"
-								className="st2"
-							/>
+							<path d="M346.4 475H164.9V244.8c0-14 11.4-25.4 25.4-25.4H321c14 0 25.4 11.4 25.4 25.4V475z" className="st2" />
 							<path
 								d="M346.4 470H165l5 5V349.9v-80-21.4c0-10.3 3.9-20.3 15-23.3 6.4-1.8 14.2-.7 20.7-.7h112.4c3.3 0 6.5 0 9.7 1.1 8.3 2.9 13.5 10.7 13.7 19.3.1 4.1 0 8.3 0 12.5v217.7c0 6.4 10 6.4 10 0v-130-79.5-19.1c-.1-13.8-7.6-26-21-30.5-7.2-2.4-15.8-1.5-23.3-1.5H192.9c-14.8 0-28.7 8.4-32 23.6-1.1 5.2-.8 10.8-.8 16.1V475c0 2.7 2.3 5 5 5h181.4c6.3 0 6.3-10-.1-10z"
 								className="st1"
@@ -28,10 +25,7 @@ export default class NotFound extends Component {
 								className="st1"
 							/>
 							<path d="M122 339.8h42.9c6.4 0 6.4-10 0-10H122c-6.4 0-6.4 10 0 10z" className="st1" />
-							<path
-								d="M344.4 241v235.9h-36V232.1c0-4.8-2.2-9.2-5.9-12.8h11.7c16.6.1 30.2 9.8 30.2 21.7z"
-								className="st4 st5"
-							/>
+							<path d="M344.4 241v235.9h-36V232.1c0-4.8-2.2-9.2-5.9-12.8h11.7c16.6.1 30.2 9.8 30.2 21.7z" className="st4 st5" />
 							<path
 								d="M376 161.2c0 66.4-53.9 120.3-120.3 120.3s-120.3-53.9-120.3-120.3c0-40.5 20-76.2 50.6-98.1 19.7-14 43.7-22.2 69.7-22.2s50 8.2 69.7 22.2C356 84.9 376 120.7 376 161.2z"
 								className="st6"
@@ -152,8 +146,8 @@ export default class NotFound extends Component {
 							</g>
 						</svg>
 						<svg id="planet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-							<circle className="saturn" cx="256" cy="256" r="149.536" fill="#598392" />
-							<g className="saturn-2" fill="#598392">
+							<circle className="saturn" cx="256" cy="256" r="149.536" fill="var(--color-brand)" />
+							<g className="saturn-2" fill="var(--color-brand)">
 								<path d="M109.388 285.56c42.515 1.428 157.943-2.613 289.462-73.807-5.11-16.448-13.02-31.882-23.322-45.604-42.716 29.386-140.403 83.922-268.457 76.27-1.354 14.666-.508 29.175 2.318 43.14zM400.734 293.587c3.976-15.31 5.422-30.68 4.614-45.672-33.75 25.31-137.237 92.367-277.65 84.876 6.507 10.874 14.383 20.93 23.472 29.88 44.354.286 137.696-6.443 245.93-57.163 1.362-3.89 2.58-7.86 3.634-11.92zM245.488 405.184c35.427 2.537 69.784-7.742 97.543-27.59-27.972 11.533-60.787 21.76-97.542 27.59zM348.02 138.097c-15.645-12.225-33.99-21.522-54.434-26.832-71.883-18.667-145.126 18.253-174.25 84.01 49.02-1.676 133.073-12.256 228.685-57.178z" />
 							</g>
 							<circle className="hover" cx="319.166" cy="208.081" r="28.389" fill="#AEC3B0" />
@@ -229,7 +223,7 @@ export default class NotFound extends Component {
 							</g>
 						</svg>
 					</div>
-					<div className="coming col col-sm-auto col-lg-4 col-lg-5 col-md-auto ">
+					<div className="coming">
 						<h1 className="fs-1-NT fw-bolder">404</h1>
 						<h1 className="fs-2 fw-bolder">Looks like you´re lost</h1>
 						<h5 className="fw-normal">Oops! The page you´re looking is not available!</h5>

@@ -2,73 +2,104 @@ import React, { useState, useEffect } from "react";
 
 import EducationCard from "../../components/EducationCard";
 import WorkCard from "../../components/WorkCard";
-import ProjectCards from "../../components/ProjectCards";
+import ProjectCard from "../../components/ProjectCard";
 
 import "../../styles/Experiences.scss";
 
-import { db, storage } from "../../services/firebase-config";
 import { getAllEducations } from "../../services/EducationsService";
+import { getAllProjects } from "../../services/ProjectsService";
+import { getAllWorkExperiences } from "../../services/WorkService";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
-
-	const getEducations = () => {
-		db.collection("educations").onSnapshot(querySnapshot => {
-			const docs = [];
-			querySnapshot.forEach(doc => {
-				docs.push({ ...doc.data(), id: doc.id });
-			});
-			setEduData(docs);
-		});
-	};
+	const [projectData, setProjectData] = useState([]);
+	const [workExperiencesData, setWorkExperiences] = useState([]);
 
 	useEffect(() => {
-		// const eduDocs = getAllEducations();
-		// setEduData(eduDocs);
-		// console.log(eduData);
-
-		getEducations();
-
-		// const storageRef = storage.ref("organizations-logos/Coursera-Logo.png");
-		// const fileUrl = storageRef.getDownloadURL();
-		// console.log(fileUrl);
+		const unsubscribeEducation = getAllEducations(setEduData);
+		const unsubscribeProjects = getAllProjects(setProjectData);
+		const unsubscribeWorkExperiences = getAllWorkExperiences(setWorkExperiences);
+		return () => {
+			unsubscribeEducation();
+			unsubscribeProjects();
+			unsubscribeWorks();
+		};
 	}, []);
 
 	return (
 		<div id="experiences" className="container experiences-container">
 			<div className="experiences-header">
-				<h1 className="experiences-title fw-bolder">Experiences</h1>
+				<h2 className="experiences-title fw-bolder">Experiences</h2>
 				<h5 className="experiences-desc">Here´s some of my work and experiences.</h5>
 				<hr className="solid"></hr>
 			</div>
-			<div className="experiences-education">
-				<h2 className="experiences-titles">Education</h2>
-				{eduData.map(edu => {
-					return (
-						<EducationCard
-							key={edu.id}
-							organization={edu.organization_name}
-							time={edu.time_spent}
-							edu_detail={edu.edu_detail}
-							edu_desc={edu.edu_description}
-							link={edu.organization_link}
-							img={edu.organization_img}
-							id={edu.id}
-						/>
-					);
-				})}
+
+			<div id="work" className="experiences-work">
+				<h3 className="experiences-titles">Work Experiences</h3>
+				<div className="work-list">
+					{workExperiencesData.map(work => {
+						return (
+							<WorkCard
+								key={work.id}
+								company={work.company}
+								position={work.position}
+								title={work.title}
+								start_date={work.start_date}
+								end_date={work.end_date}
+								description={work.description}
+								employment_type={work.employment_type}
+								currently_working={work.currently_working}
+								location={work.location}
+								time_spent={work.time_spent}
+								skills={work.skills}
+								id={work.id}
+							/>
+						);
+					})}
+				</div>
+				<hr className="solid"></hr>
+			</div>
+
+			<div id="education" className="experiences-education">
+				<h3 className="experiences-titles">Education</h3>
+				<div className="education-list">
+					{eduData.map(education => {
+						return (
+							<EducationCard
+								key={education.id}
+								school={education.school}
+								end_date={education.end_date}
+								degree={education.degree}
+								field_of_study={education.field_of_study}
+								description={education.description}
+								url={education.url}
+								start_date={education.start_date}
+								skills={education.skills}
+								id={education.id}
+							/>
+						);
+					})}
+				</div>
 			</div>
 			<hr className="solid"></hr>
 
-			{/* <div id="work" className="experiences-work">
-					<h2 className="experiences-titles">Work Experiences</h2>
-					<WorkCard/>
-				<hr className="solid"></hr> */}
-
 			<div id="portfolio" className="experiences-portfolio">
-				<h2 className="experiences-titles">Portfolio</h2>
-				<ProjectCards />
-				<br />
+				<h3 className="experiences-titles">Portfolio</h3>
+				<div className="project-grid">
+					{projectData.map(project => {
+						return (
+							<ProjectCard
+								key={project.id}
+								title={project.title || project.project_title}
+								description={project.description || project.project_description}
+								img={project.img || project.project_img}
+								url={project.url || project.project_link}
+								tech_used={project.tech_used || project.project_tech_used}
+								id={project.id}
+							/>
+						);
+					})}
+				</div>
 			</div>
 			<hr className="solid"></hr>
 		</div>

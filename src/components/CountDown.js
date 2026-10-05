@@ -43,13 +43,11 @@ class CountDown extends Component {
 
 	render() {
 		return (
-			<div className="countdown row">
+			<div className="countdown">
 				{Object.keys(this.state).map((key, i) => (
 					<div className="countdown-segment col">
-						<span className="countdown-segment-number row justify-content-center ">
-							{this.addZeros(this.state[key])}
-						</span>
-						<span className="countdown-segment-caption row justify-content-center">{key.toUpperCase()}</span>
+						<span className="countdown-segment-number">{this.addZeros(this.state[key])}</span>
+						<span className="countdown-segment-caption">{key.toUpperCase()}</span>
 					</div>
 				))}
 			</div>

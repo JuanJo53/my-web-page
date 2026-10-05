@@ -1,5 +1,17 @@
 .comingsoon {
-	margin: 200px;
+	padding-block: 10rem 4rem;
+}
+.aux-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 4rem;
+}
+.aux-actions {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
 .fs-1 {
 	font-size: 50px;
@@ -10,6 +22,12 @@
 .coming {
 	margin: 20px;
 }
-.btn {
-	margin: 10px;
+@media (max-width: 720px) {
+	.aux-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.aux-actions {
+		justify-content: flex-start;
+	}
 }
