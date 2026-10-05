@@ -10,6 +10,7 @@ import { getAllEducations } from "../../services/EducationsService";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
+	const [workData, setWorkData] = useState([]);
 
 	useEffect(() => {
 		const unsubscribe = getAllEducations(setEduData);
@@ -23,6 +24,13 @@ export default function Experiences() {
 				<h5 className="experiences-desc">Here´s some of my work and experiences.</h5>
 				<hr className="solid"></hr>
 			</div>
+
+			<div id="work" className="experiences-work">
+				<h3 className="experiences-titles">Work Experiences</h3>
+				<WorkCard />
+				<hr className="solid"></hr>
+			</div>
+
 			<div className="experiences-education">
 				<h3 className="experiences-titles">Education</h3>
 				<div className="education-list">
@@ -33,7 +41,7 @@ export default function Experiences() {
 								school={education.school}
 								end_date={education.end_date}
 								degree={education.degree}
-								field_of_study={education.field_of_study || education.fieldOfStudy}
+								field_of_study={education.field_of_study}
 								description={education.description}
 								url={education.url}
 								start_date={education.start_date}
@@ -45,11 +53,6 @@ export default function Experiences() {
 				</div>
 			</div>
 			<hr className="solid"></hr>
-
-			{/* <div id="work" className="experiences-work">
-					<h2 className="experiences-titles">Work Experiences</h2>
-					<WorkCard/>
-				<hr className="solid"></hr> */}
 
 			<div id="portfolio" className="experiences-portfolio">
 				<h2 className="experiences-titles">Portfolio</h2>
