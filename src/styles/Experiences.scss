@@ -1,6 +1,8 @@
 .experiences-container {
 	height: auto;
-	padding-top: 60px;
+	min-width: 0;
+	padding-top: clamp(2rem, 6vw, 3.75rem);
+	overflow-wrap: anywhere;
 }
 .education-list {
 	display: grid;
@@ -17,7 +19,7 @@
 }
 .education-card-body {
 	display: grid;
-	grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.8fr);
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.8fr);
 	gap: 2.5rem;
 	padding: 2.5rem;
 }
@@ -31,10 +33,12 @@
 	border-right: 1px solid var(--color-border);
 }
 .education-img {
-	display: grid;
-	place-items: center;
-	width: 132px;
-	aspect-ratio: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: min(132px, 100%);
+	height: 132px;
+	flex: 0 0 auto;
 	margin-bottom: 1.25rem;
 	padding: 0.85rem;
 	overflow: hidden;
@@ -43,9 +47,20 @@
 	border-radius: var(--radius-sm);
 }
 .education-img > img {
-	width: 100%;
-	height: 100%;
+	display: block;
+	min-width: 0;
+	min-height: 0;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
 	object-fit: contain;
+}
+.education-img-fallback {
+	color: var(--color-accent);
+	font-family: var(--font-display);
+	font-size: 2.5rem;
+	font-weight: 700;
 }
 .education-org {
 	max-width: 18ch;
@@ -60,6 +75,7 @@
 	font-weight: 600;
 }
 .education-summary {
+	min-width: 0;
 	align-self: center;
 }
 .education-detail {
@@ -100,6 +116,7 @@
 	align-items: center;
 	justify-content: center;
 	max-width: 100%;
+	overflow-wrap: anywhere;
 	margin-top: 1.5rem;
 	padding: 0.55rem 1.15rem;
 	text-align: center;
@@ -131,13 +148,13 @@
 	text-align: center;
 }
 .experiences-work {
-	padding-top: 100px;
+	padding-top: clamp(3rem, 8vw, 6.25rem);
 }
 .experiences-portfolio {
-	padding-top: 100px;
+	padding-top: clamp(3rem, 8vw, 6.25rem);
 }
 .experiences-header {
-	margin: 40px;
+	margin: clamp(1.25rem, 4vw, 2.5rem) 0;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -155,6 +172,13 @@
 	color: var(--color-on-brand);
 	border-radius: 20px !important;
 }
+.experiences-card {
+	min-width: 0;
+	overflow: hidden;
+}
+.experiences-card-body > * {
+	min-width: 0;
+}
 .col {
 	margin-bottom: 30px;
 }
@@ -169,8 +193,10 @@
 	max-width: 150px;
 }
 .org-img img {
+	display: block;
 	width: 100%;
-	height: 100px;
+	max-height: 100px;
+	aspect-ratio: 3 / 2;
 	object-fit: contain;
 	border-radius: 0.75rem;
 	background: var(--color-bg-elevated);
@@ -194,10 +220,12 @@
 }
 .project-card-media {
 	overflow: hidden;
+	width: 100%;
 	background: var(--color-surface);
 	border-bottom: 1px solid var(--color-border);
 }
 .project-card-media img {
+	display: block;
 	width: 100%;
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
@@ -279,7 +307,7 @@
 	}
 	.education-card-body {
 		gap: 1.75rem;
-		padding: 1.5rem;
+		padding: clamp(1rem, 5vw, 1.5rem);
 	}
 	.education-identity {
 		padding: 0 0 1.75rem;
@@ -288,6 +316,43 @@
 	}
 	.education-summary {
 		text-align: center;
+	}
+	.education-skills {
+		justify-content: center;
+	}
+	.experiences-card-body {
+		gap: 1.25rem;
+		padding: 1.5rem;
+	}
+	.project-grid {
+		gap: 1rem;
+	}
+	.project-card-body {
+		padding: 1.25rem;
+	}
+	.project-card-tech {
+		padding: 1rem 1.25rem 1.25rem;
+	}
+}
+@media (max-width: 480px) {
+	.education-card-body {
+		gap: 1.25rem;
+	}
+	.education-identity {
+		padding-bottom: 1.25rem;
+	}
+	.education-detail,
+	.project-card-title {
+		font-size: 1.1rem;
+	}
+	.education-link {
+		width: 100%;
+	}
+	.experiences-card-body {
+		padding: 1rem;
+	}
+	.project-grid {
+		grid-template-columns: minmax(0, 1fr);
 	}
 }
 .experiences-card p,
