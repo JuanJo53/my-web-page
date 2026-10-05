@@ -6,56 +6,39 @@ import ProjectCards from "../../components/ProjectCards";
 
 import "../../styles/Experiences.scss";
 
-import { db, storage } from "../../services/firebase-config";
 import { getAllEducations } from "../../services/EducationsService";
-import { collection, onSnapshot } from "firebase/firestore";
 
 export default function Experiences() {
 	const [eduData, setEduData] = useState([]);
 
-	const getEducations = () => {
-		onSnapshot(collection(db, "educations"), querySnapshot => {
-			const docs = [];
-			querySnapshot.forEach(doc => {
-				docs.push({ ...doc.data(), id: doc.id });
-			});
-			setEduData(docs);
-		});
-	};
-
 	useEffect(() => {
-		// const eduDocs = getAllEducations();
-		// setEduData(eduDocs);
-		// console.log(eduData);
-
-		getEducations();
-
-		// const storageRef = storage.ref("organizations-logos/Coursera-Logo.png");
-		// const fileUrl = storageRef.getDownloadURL();
-		// console.log(fileUrl);
+		const unsubscribe = getAllEducations(setEduData);
+		return () => unsubscribe();
 	}, []);
 
 	return (
 		<div id="experiences" className="container experiences-container">
 			<div className="experiences-header">
-				<h1 className="experiences-title fw-bolder">Experiences</h1>
+				<h2 className="experiences-title fw-bolder">Experiences</h2>
 				<h5 className="experiences-desc">Here´s some of my work and experiences.</h5>
 				<hr className="solid"></hr>
 			</div>
 			<div className="experiences-education">
-				<h2 className="experiences-titles">Education</h2>
+				<h3 className="experiences-titles">Education</h3>
 				<div className="education-list">
-					{eduData.map(edu => {
+					{eduData.map(education => {
 						return (
 							<EducationCard
-								key={edu.id}
-								organization={edu.organization_name}
-								time={edu.time_spent}
-								edu_detail={edu.edu_detail}
-								edu_desc={edu.edu_description}
-								link={edu.organization_link}
-								img={edu.organization_img}
-								id={edu.id}
+								key={education.id}
+								school={education.school}
+								end_date={education.end_date}
+								degree={education.degree}
+								field_of_study={education.field_of_study || education.fieldOfStudy}
+								description={education.description}
+								url={education.url}
+								start_date={education.start_date}
+								skills={education.skills}
+								id={education.id}
 							/>
 						);
 					})}

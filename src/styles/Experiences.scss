@@ -73,6 +73,28 @@
 	font-size: 1.05rem;
 	line-height: 1.7;
 }
+.education-field {
+	margin: -0.25rem 0 0.75rem;
+	color: var(--color-muted);
+	font-weight: 600;
+}
+.education-skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin: 1.15rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+.education-skills li {
+	padding: 0.3rem 0.75rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: 999px;
+	color: var(--color-muted);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
 .education-link {
 	display: inline-flex;
 	align-items: center;
