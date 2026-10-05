@@ -34,31 +34,21 @@ function getImageSource(value) {
 		return value;
 	}
 	if (value && typeof value === "object") {
-		const source =
-			value.downloadURL || value.downloadUrl || value.url || value.src || value.path;
+		const source = value.downloadURL || value.downloadUrl || value.url || value.src || value.path;
 		return typeof source === "string" ? source : "";
 	}
 	return "";
 }
 
 function isStoragePath(source) {
-	return (
-		Boolean(source) &&
-		(source.startsWith("gs://") || !/^(https?:|data:|blob:|\/|\.\/|\.\.\/)/i.test(source))
-	);
+	return Boolean(source) && (source.startsWith("gs://") || !/^(https?:|data:|blob:|\/|\.\/|\.\.\/)/i.test(source));
 }
 
 export default function EducationCard(props) {
-	const school = props.school && typeof props.school === "object" ? props.school : {};
-	const schoolName =
-		school.name ||
-		props.schoolName ||
-		props.name ||
-		props.organization ||
-		(typeof props.school === "string" ? props.school : "School");
+	const school = props.school;
+	const schoolName = school.name;
 	const schoolImageSource = getImageSource(
-		school.img || school.image || school.logo || school.image_url || school.logo_url ||
-			props.img || props.image || props.logo
+		school.img || school.image || school.logo || school.image_url || school.logo_url || props.img || props.image || props.logo
 	);
 	const [schoolImage, setSchoolImage] = useState(schoolImageSource);
 	const [schoolImageFailed, setSchoolImageFailed] = useState(false);
