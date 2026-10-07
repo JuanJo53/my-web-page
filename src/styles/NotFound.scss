@@ -1,98 +1,90 @@
 .notfound {
-	padding-block: 8rem 4rem;
+	display: grid;
+	min-height: calc(100vh - var(--navbar-height));
+	align-items: center;
+	padding-block: clamp(2.5rem, 7vh, 5rem);
 }
 .notfound .aux-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	align-items: center;
-	gap: 4rem;
+	gap: clamp(2rem, 7vw, 6rem);
+	width: 100%;
 }
-.fs-1-NT {
-	font-size: 300px;
+.notfound-illustration {
+	position: relative;
+	display: grid;
+	width: min(100%, 36rem);
+	aspect-ratio: 1;
+	place-items: center;
+	justify-self: center;
 }
-.fs-2 {
-	font-size: 50px;
-}
-.permission_denied .stars {
-	animation: sparkle 1.6s infinite ease-in-out alternate;
-}
-@keyframes sparkle {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.3;
-	}
-}
-#astronaut {
-	width: 43px;
+.notfound-illustration::before {
 	position: absolute;
-	right: 20px;
-	top: 210px;
-	animation: spin 4.5s infinite linear;
+	inset: 8%;
+	background: radial-gradient(circle, var(--hero-glow), transparent 68%);
+	border-radius: 50%;
+	content: "";
 }
-@keyframes spin {
-	0% {
-		transform: rotateZ(0deg);
-	}
-	100% {
-		transform: rotateZ(360deg);
-	}
+.notfound-art {
+	position: absolute;
+	display: block;
+	z-index: 2;
+	top: 21%;
+	left: 0;
+	width: 40%;
+	height: auto;
+	overflow: visible;
+	filter: drop-shadow(0 1.25rem 2rem rgba(3, 18, 22, 0.22));
+	transform-origin: center;
+	animation: astronaut-wander 7s ease-in-out infinite;
 }
-@media (max-width: 600px) {
-	.notfound .aux-grid {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-	.permission_denied h1 {
-		font-size: 75px;
-	}
-	.permission_denied h3 {
-		font-size: 16px;
-		width: 200px;
-		margin: 0 auto;
-		line-height: 23px;
-	}
-	.permission_denied h3 span {
-		width: 60px;
-	}
-	#astronaut {
-		width: 35px;
-		right: 40px;
-		top: 170px;
-	}
+.notfound-illustration #planet {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 92%;
+	height: auto;
+	transform-origin: center;
+	animation: moon-bounce 4s ease-in-out infinite;
 }
-
-.saturn,
-.saturn-2,
-.hover {
-	animation: hover 2s infinite ease-in-out alternate;
+.notfound-content {
+	min-width: 0;
 }
-@keyframes hover {
-	0% {
-		transform: translateY(3px);
-	}
-	100% {
-		transform: translateY(-3px);
-	}
+.notfound-content h1,
+.notfound-content h2,
+.notfound-content h5 {
+	margin-top: 0;
 }
-.st0 {
+.notfound-content .fs-1-NT {
+	margin-bottom: 0.25rem;
+	color: var(--color-brand);
+	font-size: clamp(7rem, 18vw, 14rem);
+	line-height: 0.85;
+	letter-spacing: -0.08em;
+}
+.notfound-content .fs-2 {
+	margin-bottom: 0.75rem;
+	font-size: clamp(1.75rem, 4.2vw, 3rem);
+	line-height: 1.08;
+}
+.notfound-content h5 {
+	max-width: 38ch;
+	margin-bottom: 1.5rem;
+	color: var(--color-muted);
+	font-size: clamp(1rem, 1.7vw, 1.2rem);
+	font-weight: 400;
+	line-height: 1.7;
+}
+.notfound-content .btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.9rem;
+	padding-inline: 1.5rem;
+}
+.notfound .st0 {
 	fill: none;
-}
-.st4 {
-	opacity: 0.24;
-}
-.st9 {
-	fill: var(--color-on-brand);
-}
-.st10 {
-	opacity: 0.28;
-}
-.st11 {
-	opacity: 0.25;
-}
-.st17 {
-	fill: var(--color-on-brand);
 }
 .notfound .st1,
 .notfound .st5,
@@ -101,9 +93,6 @@
 .notfound .st18,
 .notfound .st20 {
 	fill: var(--color-text);
-}
-.st19 {
-	opacity: 0.42;
 }
 .notfound .st2,
 .notfound .st6,
@@ -121,6 +110,24 @@
 .notfound .st16 {
 	fill: var(--color-muted);
 }
+.notfound .st4 {
+	opacity: 0.24;
+}
+.notfound .st9 {
+	fill: var(--color-on-brand);
+}
+.notfound .st10 {
+	opacity: 0.28;
+}
+.notfound .st11 {
+	opacity: 0.25;
+}
+.notfound .st17 {
+	fill: var(--color-on-brand);
+}
+.notfound .st19 {
+	opacity: 0.42;
+}
 .notfound .saturn,
 .notfound .saturn-2 {
 	fill: var(--color-brand);
@@ -130,4 +137,69 @@
 }
 .notfound .stars {
 	fill: var(--color-accent);
+	transform-origin: center;
+	animation: notfound-twinkle 1.8s ease-in-out infinite alternate;
+}
+@keyframes astronaut-wander {
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(-9deg);
+	}
+	50% {
+		transform: translate(0.55rem, -0.8rem) rotate(11deg);
+	}
+}
+@keyframes moon-bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-0.8rem);
+	}
+}
+@keyframes notfound-twinkle {
+	from {
+		opacity: 0.45;
+		filter: drop-shadow(0 0 0 transparent);
+	}
+	to {
+		opacity: 1;
+		filter: drop-shadow(0 0 0.55rem var(--color-accent));
+	}
+}
+@media (max-width: 760px) {
+	.notfound {
+		min-height: auto;
+	}
+	.notfound .aux-grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1.5rem;
+	}
+	.notfound-illustration {
+		width: min(72vw, 23rem);
+	}
+	.notfound-art {
+		top: 20%;
+		width: 38%;
+	}
+	.notfound-content {
+		text-align: center;
+	}
+	.notfound-content .fs-1-NT {
+		font-size: clamp(6rem, 24vw, 9rem);
+	}
+	.notfound-content h5 {
+		margin-inline: auto;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.notfound-art,
+	.notfound-illustration #planet,
+	.notfound .saturn,
+	.notfound .saturn-2,
+	.notfound .hover,
+	.notfound .stars {
+		animation: none;
+	}
 }

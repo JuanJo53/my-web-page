@@ -8,8 +8,14 @@ export default class NotFound extends Component {
 		return (
 			<div className="notfound container">
 				<div className="aux-grid">
-					<div className="time">
-						<svg id="astronaut" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+					<div className="notfound-illustration">
+						<svg
+							className="notfound-art"
+							role="img"
+							aria-label="Astronaut floating in space"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+						>
 							<circle cx="256.8" cy="255.3" r="247.9" className="st0" />
 							<path d="M346.4 475H164.9V244.8c0-14 11.4-25.4 25.4-25.4H321c14 0 25.4 11.4 25.4 25.4V475z" className="st2" />
 							<path
@@ -223,9 +229,9 @@ export default class NotFound extends Component {
 							</g>
 						</svg>
 					</div>
-					<div className="coming">
+					<div className="notfound-content">
 						<h1 className="fs-1-NT fw-bolder">404</h1>
-						<h1 className="fs-2 fw-bolder">Looks like you´re lost</h1>
+						<h2 className="fs-2 fw-bolder">Looks like you´re lost</h2>
 						<h5 className="fw-normal">Oops! The page you´re looking is not available!</h5>
 						<Link className="btn btn-primary" to="/">
 							Go Home

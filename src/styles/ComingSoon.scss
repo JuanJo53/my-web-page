@@ -1,33 +1,81 @@
 .comingsoon {
-	padding-block: 10rem 4rem;
-}
-.aux-grid {
+	min-height: calc(100vh - var(--navbar-height));
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	align-items: center;
-	gap: 4rem;
+	padding-block: clamp(3rem, 8vh, 6rem);
 }
-.aux-actions {
+.comingsoon .aux-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	align-items: center;
+	gap: clamp(2rem, 6vw, 5rem);
+}
+.comingsoon .time,
+.comingsoon .coming {
+	min-width: 0;
+	margin: 0;
+}
+.comingsoon .time {
+	padding: clamp(1.5rem, 4vw, 2.5rem);
+	background:
+		radial-gradient(ellipse at top left, var(--hero-glow), transparent 68%),
+		var(--color-bg-elevated);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-soft);
+}
+.comingsoon-eyebrow {
+	margin: 0 0 0.65rem;
+	color: var(--color-accent);
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	line-height: 1.5;
+}
+.comingsoon-countdown-title {
+	margin: 0;
+	font-size: clamp(1.4rem, 3vw, 2rem);
+	line-height: 1.2;
+}
+.comingsoon-title {
+	max-width: 12ch;
+	margin: 0 0 1rem;
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+	line-height: 1.05;
+}
+.comingsoon .coming h5 {
+	max-width: 48ch;
+	margin: 0;
+	color: var(--color-muted);
+	font-size: clamp(1rem, 1.6vw, 1.2rem);
+	line-height: 1.7;
+}
+.comingsoon .aux-actions {
 	display: flex;
-	justify-content: flex-end;
 	flex-wrap: wrap;
-	gap: 0.5rem;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
 }
-.fs-1 {
-	font-size: 50px;
+.comingsoon .aux-actions .btn {
+	min-height: 2.75rem;
 }
-.time {
-	margin: 20px;
-}
-.coming {
-	margin: 20px;
-}
-@media (max-width: 720px) {
-	.aux-grid {
-		grid-template-columns: 1fr;
+@media (max-width: 760px) {
+	.comingsoon {
+		min-height: auto;
+	}
+	.comingsoon .aux-grid {
+		grid-template-columns: minmax(0, 1fr);
 		gap: 2rem;
 	}
-	.aux-actions {
-		justify-content: flex-start;
+}
+@media (max-width: 480px) {
+	.comingsoon .time {
+		padding: 1.25rem;
+	}
+	.comingsoon .aux-actions {
+		flex-direction: column;
+	}
+	.comingsoon .aux-actions .btn {
+		width: 100%;
 	}
 }

@@ -14,20 +14,19 @@ class ComingSoon extends Component {
 			<div className="comingsoon container">
 				<div className="aux-grid">
 					<div className="time">
-						<div>
-							<h1 className="fs-1 fw-bolder">Time Remaining!</h1>
-						</div>
-						<CountDown futureDate={countdown.futureDate}></CountDown>
-						<br />
+						<p className="comingsoon-eyebrow">THE COUNTDOWN IS ON</p>
+						<h2 className="comingsoon-countdown-title">Time until launch</h2>
+						<CountDown futureDate={countdown.futureDate} />
 						<div className="aux-actions">
 							<button className="btn btn-secondary">MORE INFORMATION</button>
 							<button className="btn btn-primary disabled">NOTIFY ME!</button>
 						</div>
 					</div>
 					<div className="coming">
-						<h1 className="fs-1 fw-bolder">This Page is Coming Soon!</h1>
+						<p className="comingsoon-eyebrow">A NEW EXPERIENCE IS ON ITS WAY</p>
+						<h1 className="comingsoon-title">This page is coming soon.</h1>
 						<h5 className="fw-normal">
-							This sections is still in building. It will be available for your soon, with some awesome stuff to checkout here!
+							This section is still being built. It will be available soon, with some awesome things to explore.
 						</h5>
 					</div>
 				</div>

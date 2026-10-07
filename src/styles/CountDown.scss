@@ -1,21 +1,41 @@
 .countdown {
 	display: grid;
-	margin-top: 50px;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.65rem;
+	margin-top: 1.5rem;
 }
-.countdown div:not(:last-child) {
-	border-right: 2px solid var(--color-accent);
+.countdown-segment {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	margin: 0;
+	padding: clamp(0.65rem, 2vw, 1rem) 0.25rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
 }
 .countdown-segment-number {
-	font-size: 30px;
+	color: var(--color-text);
+	font-family: var(--font-display);
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
 	font-weight: 700;
-	transition: all 0.2s ease-in;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
 }
-
-.countdown-segment-number:hover {
-	transform: scale(1.3);
-}
-
 .countdown-segment-caption {
-	font-size: 16px;
-	font-weight: 500;
+	color: var(--color-muted);
+	font-size: clamp(0.58rem, 1.3vw, 0.75rem);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+}
+@media (max-width: 380px) {
+	.countdown {
+		gap: 0.35rem;
+	}
+	.countdown-segment {
+		padding-inline: 0.1rem;
+	}
 }
