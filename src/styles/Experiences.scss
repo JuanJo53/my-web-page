@@ -6,6 +6,7 @@
 }
 .education-list {
 	display: grid;
+	grid-template-columns: minmax(0, 1fr);
 	gap: 1.5rem;
 	margin-top: 1.5rem;
 }
@@ -14,9 +15,6 @@
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1.5rem;
 	margin-top: 1.5rem;
-}
-#education .education-list {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .certification-card {
 	display: flex;
@@ -517,8 +515,7 @@
 }
 @media (max-width: 980px) {
 	.project-grid,
-	.certifications-list,
-	#education .education-list {
+	.certifications-list {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
@@ -526,8 +523,7 @@
 	.education-card-body,
 	.experiences-card-body,
 	.project-grid,
-	.certifications-list,
-	#education .education-list {
+	.certifications-list {
 		grid-template-columns: 1fr;
 	}
 	.education-card-body {

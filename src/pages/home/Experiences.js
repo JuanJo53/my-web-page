@@ -68,27 +68,6 @@ export default function Experiences() {
 			<div id="education" className="experiences-education">
 				<h3 className="experiences-titles">Education</h3>
 				<div className="education-list">
-					{certificatesData.map(certificate => {
-						return (
-							<CertificationCard
-								key={certificate.id}
-								description={certificate.description}
-								exped_date={certificate.exped_date}
-								expiry_date={certificate.expiry_date}
-								name={certificate.name}
-								organization={certificate.organization}
-								url={certificate.url}
-								id={certificate.id}
-							/>
-						);
-					})}
-				</div>
-			</div>
-			<hr className="solid"></hr>
-
-			<div id="certifications" className="experiences-certifications">
-				<h3 className="experiences-titles">Certifications</h3>
-				<div className="certifications-list">
 					{eduData.map(education => {
 						return (
 							<EducationCard
@@ -102,6 +81,27 @@ export default function Experiences() {
 								start_date={education.start_date}
 								skills={education.skills}
 								id={education.id}
+							/>
+						);
+					})}
+				</div>
+			</div>
+			<hr className="solid"></hr>
+
+			<div id="certifications" className="experiences-certifications">
+				<h3 className="experiences-titles">Certifications</h3>
+				<div className="certifications-list">
+					{certificatesData.map(certificate => {
+						return (
+							<CertificationCard
+								key={certificate.id}
+								description={certificate.description}
+								exped_date={certificate.exped_date}
+								expiry_date={certificate.expiry_date}
+								name={certificate.name}
+								organization={certificate.organization}
+								url={certificate.url}
+								id={certificate.id}
 							/>
 						);
 					})}
