@@ -130,8 +130,19 @@ const Header = () => {
 										{isHome ? (
 											<>
 												<Scroll
+													className={`dropdown-item${activeSection === "work" ? " active" : ""}`}
+													to="work"
+													smooth
+													duration={500}
+													offset={SCROLL_OFFSET}
+													href="#work"
+													onClick={handleCollapse}
+												>
+													Work
+												</Scroll>
+												<Scroll
 													className={`dropdown-item${activeSection === "experiences" ? " active" : ""}`}
-													to="experiences"
+													to="education"
 													smooth
 													duration={500}
 													offset={SCROLL_OFFSET}
@@ -140,12 +151,6 @@ const Header = () => {
 												>
 													Education
 												</Scroll>
-												<span
-													className={`dropdown-item disabled${activeSection === "work" ? " active" : ""}`}
-													aria-disabled="true"
-												>
-													Work
-												</span>
 												<Scroll
 													className={`dropdown-item${activeSection === "portfolio" ? " active" : ""}`}
 													to="portfolio"
